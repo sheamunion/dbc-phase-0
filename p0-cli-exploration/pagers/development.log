@@ -1,0 +1,1712 @@
+  [1m[36m (38.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (4.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTwoots (20150116152638)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (29.9ms)[0m  [1mCREATE TABLE "twoots" ("id" serial primary key, "body" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (11.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150116152638"]]
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 10:29:10 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TwootsController#index as */*
+  [1m[35mTwoot Load (6.4ms)[0m  SELECT "twoots".* FROM "twoots"
+  Rendered twoots/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 663ms (Views: 644.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 10:29:24 -0500
+Processing by TwootsController#index as HTML
+  [1m[36mTwoot Load (0.3ms)[0m  [1mSELECT "twoots".* FROM "twoots"[0m
+  Rendered twoots/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 10:29:24 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 10:29:24 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 10:29:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 10:29:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 10:29:24 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 10:29:24 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 10:29:24 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 10:29:24 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 10:29:44 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 10:29:44 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 10:29:44 -0500
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 10:29:47 -0500
+Processing by TwootsController#index as HTML
+  [1m[35mTwoot Load (0.3ms)[0m  SELECT "twoots".* FROM "twoots"
+  Rendered twoots/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 10:29:47 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 10:29:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 10:29:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 10:29:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 10:29:47 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 10:29:47 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 10:29:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 10:29:47 -0500
+
+
+Started GET "/twoots.json" for 127.0.0.1 at 2015-01-16 10:32:22 -0500
+Processing by TwootsController#index as JSON
+  [1m[36mTwoot Load (0.4ms)[0m  [1mSELECT "twoots".* FROM "twoots"[0m
+  Rendered twoots/index.json.jbuilder (6.1ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/twoots.xml" for 127.0.0.1 at 2015-01-16 10:32:27 -0500
+Processing by TwootsController#index as XML
+Completed 500 Internal Server Error in 5ms
+
+ActionView::MissingTemplate (Missing template twoots/index, application/index with {:locale=>[:en], :formats=>[:xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/sgharms/doves/twooter/app/views"
+):
+  actionview (4.1.8) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.8) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.8) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.8) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.8) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.8) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.8) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.8) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.8) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.8) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.8) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.8) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.8) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.8) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.8) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.8) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.5ms)
+
+
+Started GET "/twoots.json" for 127.0.0.1 at 2015-01-16 10:32:31 -0500
+Processing by TwootsController#index as JSON
+  [1m[35mTwoot Load (0.3ms)[0m  SELECT "twoots".* FROM "twoots"
+  Rendered twoots/index.json.jbuilder (1.1ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 10:32:36 -0500
+Processing by TwootsController#index as HTML
+  [1m[36mTwoot Load (0.3ms)[0m  [1mSELECT "twoots".* FROM "twoots"[0m
+  Rendered twoots/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 49ms (Views: 48.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 10:32:36 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 10:32:36 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 10:32:36 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 10:32:36 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 10:32:36 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 10:32:36 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 10:32:36 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 10:32:36 -0500
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 10:32:38 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (21.0ms)
+  Rendered twoots/new.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 63ms (Views: 58.8ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:32:42 -0500
+Processing by TwootsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YMC7lUsdJ5O7ZjnakYlZkCLozsxwrS+6BI5qTnGS+5k=", "twoot"=>{"body"=>"I'm twooting!"}, "commit"=>"Create Twoot"}
+  [1m[35m (1.1ms)[0m  BEGIN
+  [1m[36mSQL (24.2ms)[0m  [1mINSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "I'm twooting!"], ["created_at", "2015-01-16 15:32:42.658324"], ["updated_at", "2015-01-16 15:32:42.658324"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3100/twoots/1
+Completed 302 Found in 34ms (ActiveRecord: 25.9ms)
+
+
+Started GET "/twoots/1" for 127.0.0.1 at 2015-01-16 10:32:42 -0500
+Processing by TwootsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTwoot Load (6.1ms)[0m  [1mSELECT  "twoots".* FROM "twoots"  WHERE "twoots"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered twoots/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 48ms (Views: 38.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 10:32:42 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 10:32:42 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 10:32:42 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 10:32:42 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 10:32:42 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 10:32:42 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 10:32:42 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 10:32:42 -0500
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 10:32:44 -0500
+Processing by TwootsController#index as HTML
+  [1m[35mTwoot Load (0.2ms)[0m  SELECT "twoots".* FROM "twoots"
+  Rendered twoots/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/twoots.json" for 127.0.0.1 at 2015-01-16 10:32:48 -0500
+Processing by TwootsController#index as JSON
+  [1m[36mTwoot Load (0.3ms)[0m  [1mSELECT "twoots".* FROM "twoots"[0m
+  Rendered twoots/index.json.jbuilder (2.2ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/twoots.json" for 127.0.0.1 at 2015-01-16 10:33:01 -0500
+Processing by TwootsController#index as JSON
+  [1m[35mTwoot Load (0.6ms)[0m  SELECT "twoots".* FROM "twoots"
+  Rendered twoots/index.json.jbuilder (2.0ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/twoots.html" for 127.0.0.1 at 2015-01-16 10:34:23 -0500
+Processing by TwootsController#index as HTML
+  [1m[36mTwoot Load (0.2ms)[0m  [1mSELECT "twoots".* FROM "twoots"[0m
+  Rendered twoots/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 10:34:23 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 10:34:23 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 10:34:23 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 10:34:23 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 10:34:23 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 10:34:23 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 10:34:23 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 10:34:23 -0500
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 10:34:49 -0500
+Processing by TwootsController#index as JSON
+  [1m[35mTwoot Load (0.2ms)[0m  SELECT "twoots".* FROM "twoots"
+  Rendered twoots/index.json.jbuilder (1.2ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/twoot.html" for 127.0.0.1 at 2015-01-16 10:35:19 -0500
+
+ActionController::RoutingError (No route matches [GET] "/twoot.html"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.2ms)
+
+
+Started GET "/twoots.html" for 127.0.0.1 at 2015-01-16 10:36:04 -0500
+Processing by TwootsController#index as HTML
+  [1m[36mTwoot Load (0.3ms)[0m  [1mSELECT "twoots".* FROM "twoots"[0m
+  Rendered twoots/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 10:43:19 -0500
+Processing by TwootsController#index as XML
+  [1m[35mTwoot Load (0.3ms)[0m  SELECT "twoots".* FROM "twoots"
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 10:45:02 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 10:45:02 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 10:45:02 -0500
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 10:45:06 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (1.7ms)
+  Rendered twoots/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 75ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:45:10 -0500
+Processing by TwootsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YMC7lUsdJ5O7ZjnakYlZkCLozsxwrS+6BI5qTnGS+5k=", "twoot"=>{"body"=>"xaxorg"}, "commit"=>"Create Twoot"}
+  [1m[36m (5.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["body", "xaxorg"], ["created_at", "2015-01-16 15:45:10.404068"], ["updated_at", "2015-01-16 15:45:10.404068"]]
+  [1m[36m (5.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3100/twoots/2
+Completed 302 Found in 15ms (ActiveRecord: 11.5ms)
+
+
+Started GET "/twoots/2" for 127.0.0.1 at 2015-01-16 10:45:10 -0500
+Processing by TwootsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTwoot Load (0.3ms)[0m  SELECT  "twoots".* FROM "twoots"  WHERE "twoots"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered twoots/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 10:45:10 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 10:45:10 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 10:45:10 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 10:45:10 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 10:45:10 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 10:45:10 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 10:45:10 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 10:45:10 -0500
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 10:45:26 -0500
+Processing by TwootsController#index as HTML
+  [1m[36mTwoot Load (0.3ms)[0m  [1mSELECT "twoots".* FROM "twoots"[0m
+  Rendered twoots/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 10:45:28 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (1.1ms)
+  Rendered twoots/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 66ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:45:31 -0500
+Processing by TwootsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YMC7lUsdJ5O7ZjnakYlZkCLozsxwrS+6BI5qTnGS+5k=", "twoot"=>{"body"=>"smackwangler"}, "commit"=>"Create Twoot"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "smackwangler"], ["created_at", "2015-01-16 15:45:31.918299"], ["updated_at", "2015-01-16 15:45:31.918299"]]
+  [1m[35m (6.1ms)[0m  COMMIT
+Redirected to http://localhost:3100/twoots/3
+Completed 302 Found in 11ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/twoots/3" for 127.0.0.1 at 2015-01-16 10:45:31 -0500
+Processing by TwootsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTwoot Load (0.2ms)[0m  [1mSELECT  "twoots".* FROM "twoots"  WHERE "twoots"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered twoots/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 10:45:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 10:45:32 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 10:45:32 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 10:45:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 10:45:32 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 10:45:32 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 10:45:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 10:45:32 -0500
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 10:46:13 -0500
+Processing by TwootsController#index as HTML
+  [1m[35mTwoot Load (0.3ms)[0m  SELECT "twoots".* FROM "twoots"
+  Rendered twoots/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 10:46:15 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (1.4ms)
+  Rendered twoots/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 10:47:19 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (3.1ms)
+  Rendered twoots/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 10:47:19 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 10:47:19 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 10:47:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 10:47:19 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 10:47:19 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 10:47:19 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 10:47:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 10:47:19 -0500
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:47:30 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"AJAXY TWOOT"}, "commit"=>"Create Twoot"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["body", "AJAXY TWOOT"], ["created_at", "2015-01-16 15:47:30.982738"], ["updated_at", "2015-01-16 15:47:30.982738"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3100/twoots/4
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/twoots/4" for 127.0.0.1 at 2015-01-16 10:47:30 -0500
+Processing by TwootsController#show as JS
+  Parameters: {"id"=>"4"}
+  [1m[35mTwoot Load (0.3ms)[0m  SELECT  "twoots".* FROM "twoots"  WHERE "twoots"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered twoots/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:51:05 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"AJAXY TWOOT2"}, "commit"=>"Create Twoot"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["body", "AJAXY TWOOT2"], ["created_at", "2015-01-16 15:51:05.915639"], ["updated_at", "2015-01-16 15:51:05.915639"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 12ms (Views: 1.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 10:51:13 -0500
+Processing by TwootsController#index as HTML
+  [1m[35mTwoot Load (0.4ms)[0m  SELECT "twoots".* FROM "twoots"
+  Rendered twoots/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 66ms (Views: 64.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 10:51:13 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 10:51:13 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 10:51:13 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 10:51:13 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 10:51:13 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 10:51:13 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 10:51:13 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 10:51:13 -0500
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:52:01 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"AJAXY TWOOT3"}, "commit"=>"Create Twoot"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["body", "AJAXY TWOOT3"], ["created_at", "2015-01-16 15:52:01.027239"], ["updated_at", "2015-01-16 15:52:01.027239"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 10:52:50 -0500
+Processing by TwootsController#index as HTML
+  [1m[35mTwoot Load (0.3ms)[0m  SELECT "twoots".* FROM "twoots"
+  Rendered twoots/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 55ms (Views: 49.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 10:52:50 -0500
+Processing by TwootsController#index as HTML
+  [1m[36mTwoot Load (1.4ms)[0m  [1mSELECT "twoots".* FROM "twoots"[0m
+  Rendered twoots/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 10:52:50 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 10:52:50 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 10:52:50 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 10:52:50 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 10:52:50 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 10:52:50 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 10:52:50 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 10:52:50 -0500
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 10:52:53 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (2.5ms)
+  Rendered twoots/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:52:59 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"rock doves r00l"}, "commit"=>"Create Twoot"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "rock doves r00l"], ["created_at", "2015-01-16 15:52:59.875108"], ["updated_at", "2015-01-16 15:52:59.875108"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:53:02 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"rock doves r00l"}, "commit"=>"Create Twoot"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["body", "rock doves r00l"], ["created_at", "2015-01-16 15:53:02.151954"], ["updated_at", "2015-01-16 15:53:02.151954"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:53:02 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"rock doves r00l"}, "commit"=>"Create Twoot"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "rock doves r00l"], ["created_at", "2015-01-16 15:53:02.534914"], ["updated_at", "2015-01-16 15:53:02.534914"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:53:02 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"rock doves r00l"}, "commit"=>"Create Twoot"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["body", "rock doves r00l"], ["created_at", "2015-01-16 15:53:02.739872"], ["updated_at", "2015-01-16 15:53:02.739872"]]
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:53:02 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"rock doves r00l"}, "commit"=>"Create Twoot"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "rock doves r00l"], ["created_at", "2015-01-16 15:53:02.896735"], ["updated_at", "2015-01-16 15:53:02.896735"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:53:03 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"rock doves r00l"}, "commit"=>"Create Twoot"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["body", "rock doves r00l"], ["created_at", "2015-01-16 15:53:03.087719"], ["updated_at", "2015-01-16 15:53:03.087719"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:53:03 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"rock doves r00l"}, "commit"=>"Create Twoot"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "rock doves r00l"], ["created_at", "2015-01-16 15:53:03.250704"], ["updated_at", "2015-01-16 15:53:03.250704"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:53:03 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"rock doves r00l"}, "commit"=>"Create Twoot"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["body", "rock doves r00l"], ["created_at", "2015-01-16 15:53:03.424381"], ["updated_at", "2015-01-16 15:53:03.424381"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:53:03 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"rock doves r00l"}, "commit"=>"Create Twoot"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "rock doves r00l"], ["created_at", "2015-01-16 15:53:03.598891"], ["updated_at", "2015-01-16 15:53:03.598891"]]
+  [1m[35m (5.8ms)[0m  COMMIT
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:53:03 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"rock doves r00l"}, "commit"=>"Create Twoot"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["body", "rock doves r00l"], ["created_at", "2015-01-16 15:53:03.768086"], ["updated_at", "2015-01-16 15:53:03.768086"]]
+  [1m[36m (4.6ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:53:03 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"rock doves r00l"}, "commit"=>"Create Twoot"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "rock doves r00l"], ["created_at", "2015-01-16 15:53:03.934804"], ["updated_at", "2015-01-16 15:53:03.934804"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:53:04 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"rock doves r00l"}, "commit"=>"Create Twoot"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["body", "rock doves r00l"], ["created_at", "2015-01-16 15:53:04.121468"], ["updated_at", "2015-01-16 15:53:04.121468"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:53:04 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"rock doves r00l"}, "commit"=>"Create Twoot"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "rock doves r00l"], ["created_at", "2015-01-16 15:53:04.286373"], ["updated_at", "2015-01-16 15:53:04.286373"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 10:54:51 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (3.3ms)
+  Rendered twoots/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 62ms (Views: 55.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 10:54:51 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 10:54:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 10:54:51 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 10:54:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 10:54:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 10:54:51 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 10:54:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 10:54:51 -0500
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:54:54 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"zabu"}, "commit"=>"Create Twoot"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["body", "zabu"], ["created_at", "2015-01-16 15:54:54.658264"], ["updated_at", "2015-01-16 15:54:54.658264"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  Rendered twoots/create.js.erb (0.8ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 10:56:00 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (1.3ms)
+  Rendered twoots/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 10:56:00 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 10:56:00 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 10:56:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 10:56:00 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 10:56:00 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 10:56:00 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 10:56:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 10:56:00 -0500
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:56:01 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"asdfasdf"}, "commit"=>"Create Twoot"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "asdfasdf"], ["created_at", "2015-01-16 15:56:01.734168"], ["updated_at", "2015-01-16 15:56:01.734168"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  Rendered twoots/create.js.erb (0.6ms)
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 10:56:25 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (1.5ms)
+  Rendered twoots/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 10:56:25 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 10:56:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 10:56:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 10:56:25 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 10:56:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 10:56:25 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 10:56:25 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 10:56:25 -0500
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 10:56:28 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"work"}, "commit"=>"Create Twoot"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["body", "work"], ["created_at", "2015-01-16 15:56:28.330635"], ["updated_at", "2015-01-16 15:56:28.330635"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  Rendered twoots/create.js.erb (0.6ms)
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 11:03:49 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (1.2ms)
+  Rendered twoots/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 11:03:49 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 11:03:49 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 11:03:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 11:03:49 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 11:03:49 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 11:03:49 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 11:03:49 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 11:03:49 -0500
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 11:04:03 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"A twoot para mi amgo, Daniel"}, "commit"=>"Create Twoot"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "A twoot para mi amgo, Daniel"], ["created_at", "2015-01-16 16:04:03.790861"], ["updated_at", "2015-01-16 16:04:03.790861"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  Rendered twoots/create.js.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 11:04:05 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (2.1ms)
+  Rendered twoots/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 11:04:05 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 11:04:05 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 11:04:05 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 11:04:05 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 11:04:05 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 11:04:05 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 11:04:05 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 11:04:05 -0500
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 11:04:06 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (1.5ms)
+  Rendered twoots/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 59ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 11:04:06 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 11:04:06 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 11:04:06 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 11:04:06 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 11:04:06 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 11:04:06 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 11:04:06 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 11:04:06 -0500
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 11:04:06 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (1.2ms)
+  Rendered twoots/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 11:04:06 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 11:04:06 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 11:04:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 11:04:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 11:04:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 11:04:07 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-16 11:04:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 11:04:07 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 11:04:09 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 11:04:09 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 11:04:09 -0500
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 11:04:23 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"Un otro twoot para Daniel"}, "commit"=>"Create Twoot"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["body", "Un otro twoot para Daniel"], ["created_at", "2015-01-16 16:04:23.978095"], ["updated_at", "2015-01-16 16:04:23.978095"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  Rendered twoots/create.js.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 11:04:55 -0500
+Processing by TwootsController#index as */*
+  [1m[35mTwoot Load (0.4ms)[0m  SELECT "twoots".* FROM "twoots"
+  Rendered twoots/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 11:05:08 -0500
+Processing by TwootsController#new as */*
+  Rendered twoots/_form.html.erb (1.6ms)
+  Rendered twoots/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 69ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 11:05:19 -0500
+Processing by TwootsController#create as */*
+  Parameters: {"twoot"=>{"body"=>"In the console like a G6"}, "commit"=>"Create Twoot"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:176:in `handle_unverified_request'
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:202:in `handle_unverified_request'
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:197:in `verify_authenticity_token'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:424:in `block in make_lambda'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.2ms)
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 11:06:58 -0500
+Processing by TwootsController#index as HTML
+  [1m[36mTwoot Load (0.4ms)[0m  [1mSELECT "twoots".* FROM "twoots"[0m
+  Rendered twoots/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 11:06:58 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 11:06:58 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 11:06:58 -0500
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 11:07:00 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (1.1ms)
+  Rendered twoots/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 74ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 11:07:05 -0500
+Processing by TwootsController#create as HTML
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"the last one"}, "commit"=>"Create Twoot"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:176:in `handle_unverified_request'
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:202:in `handle_unverified_request'
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:197:in `verify_authenticity_token'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:424:in `block in make_lambda'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.5ms)
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 11:08:13 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (2.0ms)
+  Rendered twoots/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 11:08:13 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 11:08:13 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 11:08:13 -0500
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 11:11:24 -0500
+Processing by TwootsController#index as XML
+  [1m[35mTwoot Load (0.4ms)[0m  SELECT "twoots".* FROM "twoots"
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 11:11:34 -0500
+Processing by TwootsController#index as JSON
+Completed 406 Not Acceptable in 1ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/twoots_controller.rb:9:in `index'
+
+
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.9ms)
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 11:11:43 -0500
+Processing by TwootsController#index as application/js
+Completed 406 Not Acceptable in 1ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/twoots_controller.rb:9:in `index'
+
+
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.8ms)
+
+
+Started GET "/twoots.json" for 127.0.0.1 at 2015-01-16 11:11:46 -0500
+Processing by TwootsController#index as JSON
+Completed 406 Not Acceptable in 1ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/twoots_controller.rb:9:in `index'
+
+
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.6ms)
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 11:13:17 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (2.3ms)
+  Rendered twoots/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 40ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 11:13:17 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 11:13:17 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 11:13:17 -0500
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 11:13:19 -0500
+Processing by TwootsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oDOb68Q/UAQbfB/D8Uasqfg+cHnmzCVuogGJX6Cvw1U=", "twoot"=>{"body"=>"jabu"}, "commit"=>"Create Twoot"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["body", "jabu"], ["created_at", "2015-01-16 16:13:19.335645"], ["updated_at", "2015-01-16 16:13:19.335645"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3100/twoots/25
+Completed 302 Found in 10ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/twoots/25" for 127.0.0.1 at 2015-01-16 11:13:19 -0500
+Processing by TwootsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mTwoot Load (0.3ms)[0m  SELECT  "twoots".* FROM "twoots"  WHERE "twoots"."id" = $1 LIMIT 1  [["id", 25]]
+  Rendered twoots/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 11:13:19 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 11:13:19 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 11:13:19 -0500
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-01-16 11:18:17 -0500
+Processing by TwootsController#index as HTML
+  [1m[36mTwoot Load (0.3ms)[0m  [1mSELECT "twoots".* FROM "twoots"[0m
+  Rendered twoots/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 54ms (Views: 50.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 11:18:17 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 11:18:17 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 11:18:17 -0500
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 11:18:19 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (1.4ms)
+  Rendered twoots/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 11:18:19 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 11:18:19 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 11:18:19 -0500
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 11:18:29 -0500
+Processing by TwootsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oDOb68Q/UAQbfB/D8Uasqfg+cHnmzCVuogGJX6Cvw1U=", "twoot"=>{"body"=>"para jorge, mi amgico,"}, "commit"=>"Create Twoot"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "para jorge, mi amgico,"], ["created_at", "2015-01-16 16:18:29.949090"], ["updated_at", "2015-01-16 16:18:29.949090"]]
+  [1m[35m (5.8ms)[0m  COMMIT
+Redirected to http://localhost:3100/twoots/26
+Completed 302 Found in 10ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/twoots/26" for 127.0.0.1 at 2015-01-16 11:18:29 -0500
+Processing by TwootsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTwoot Load (0.5ms)[0m  [1mSELECT  "twoots".* FROM "twoots"  WHERE "twoots"."id" = $1 LIMIT 1[0m  [["id", 26]]
+  Rendered twoots/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 11:18:30 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 11:18:30 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 11:18:30 -0500
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-16 11:18:50 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (2.0ms)
+  Rendered twoots/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-16 11:18:50 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 11:18:50 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-16 11:18:50 -0500
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-16 11:19:10 -0500
+Processing by TwootsController#create as HTML
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"hhhhhhheeeeeeeey jorge"}, "commit"=>"Create Twoot"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:176:in `handle_unverified_request'
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:202:in `handle_unverified_request'
+  actionpack (4.1.8) lib/action_controller/metal/request_forgery_protection.rb:197:in `verify_authenticity_token'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:424:in `block in make_lambda'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:160:in `block in halting'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.8) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.8) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.8) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.8) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.8) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.8) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.8) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.8) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-26 11:22:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/railties-4.1.8/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 23ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/twoots/new" for 127.0.0.1 at 2015-01-26 11:22:21 -0500
+Processing by TwootsController#new as HTML
+  Rendered twoots/_form.html.erb (22.8ms)
+  Rendered twoots/new.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 119ms (Views: 111.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-26 11:22:21 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-26 11:22:22 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-26 11:22:22 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-26 11:22:22 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-26 11:22:22 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-26 11:22:22 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-26 11:22:22 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-01-26 11:22:22 -0500
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-01-26 11:22:42 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-26 11:22:42 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-26 11:22:42 -0500
+
+
+Started POST "/twoots" for 127.0.0.1 at 2015-01-26 11:22:48 -0500
+Processing by TwootsController#create as JS
+  Parameters: {"utf8"=>"✓", "twoot"=>{"body"=>"demo_twoot"}, "commit"=>"Create Twoot"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (25.0ms)[0m  [1mINSERT INTO "twoots" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "demo_twoot"], ["created_at", "2015-01-26 16:22:48.695118"], ["updated_at", "2015-01-26 16:22:48.695118"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3100/twoots/27
+Completed 302 Found in 32ms (ActiveRecord: 26.3ms)
+
+
+Started GET "/twoots/27" for 127.0.0.1 at 2015-01-26 11:22:48 -0500
+Processing by TwootsController#show as JS
+  Parameters: {"id"=>"27"}
+  [1m[36mTwoot Load (0.4ms)[0m  [1mSELECT  "twoots".* FROM "twoots"  WHERE "twoots"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  Rendered twoots/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-17 11:13:37 -0500
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `initialize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `new'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.8) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.8) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.8) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.8) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.8) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/sgharms/.rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.4ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-17 11:20:04 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (25.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/sgharms/.gem/ruby/2.1.2/gems/railties-4.1.8/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 29ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/twoots" for 127.0.0.1 at 2015-02-17 11:20:08 -0500
+Processing by TwootsController#index as HTML
+  [1m[35mTwoot Load (18.0ms)[0m  SELECT "twoots".* FROM "twoots"
+  Rendered twoots/index.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 142ms (Views: 112.1ms | ActiveRecord: 27.6ms)
+
+
+Started GET "/assets/twoots.css?body=1" for 127.0.0.1 at 2015-02-17 11:20:09 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-17 11:20:09 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-17 11:20:09 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-02-17 11:20:09 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-17 11:20:09 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-17 11:20:09 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-02-17 11:20:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-17 11:20:09 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-02-17 11:20:09 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-17 11:20:09 -0500
+
+
+Started GET "/assets/twoots.js?body=1" for 127.0.0.1 at 2015-02-17 11:20:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-17 11:20:09 -0500

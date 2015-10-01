@@ -1,0 +1,9 @@
+#!/bin/sh
+
+find . -name visited -exec rm {} \;
+
+touch kiddie_gym/pick_up_rugrat
+touch mechanic/pick_up_sport_wagon
+touch hair_salon/pick_up_grandma_with_awesome_beehive
+touch bank/get_more_money
+touch vegetarian_burger_joint/pick_up_sustainable_food
