@@ -2,7 +2,6 @@
 
 ##How does tracking and adding changes make developers' lives easier?
 
-<<<<<<< HEAD
 Doing so allows teams to work on multiple projects and features at the same time from many locations while maintaining a history of all committed changes. This also allows teams to easily revert to previous versions of features or projects.
 
 ##What is a commit?
@@ -17,17 +16,6 @@ Leave an empty line and then provide a more detailed explanation of the changes 
 
 ##What does the HEAD^ argument mean?
 
-=======
-##What is a commit?
-A snapshot of changes up to that moment. It's like "saving" your work.
-
-##What are the best practices for commit messages?
-Use imperative, present tense.
-Add a description in the first line up to 51 characters.
-Leave an empty line and then provide a more detailed explanation of the changes purpose and how behavior of the program or file changes as a result.
-
-##What does the HEAD^ argument mean?
->>>>>>> 181f4d3086078c397332fa593190ab89d71ca095
 This is the commit just before the commit you just made. If you want to move even further back in commits, you can use HEAD~3, HEAD~4, and so on.
 
 ##What are the 3 stages of a git change and how do you move a file from one stage to the other?
@@ -42,10 +30,6 @@ Add files that have been modified to the staging area:
 
 > git add [filename]
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 181f4d3086078c397332fa593190ab89d71ca095
 Commit modified files:
 
 > git commmit -v *or* git commit -m "*description of change*"
