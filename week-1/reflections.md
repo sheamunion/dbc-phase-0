@@ -238,13 +238,17 @@ Bring a committed file back to staging:
 **Fetch any changes from the remote repo to my machine. NOTE: This WILL NOT automatically merge changes with my branch.**
 
 > git fetch origin
+
 > git checkout -b *working-branch* origin/*working-branch*
+
 > git merge master
 
 **Merge changes and update on GitHub**
 
 > git checkout master
+
 > git merge --no-ff *working-branch*
+
 > git push origin master
 
 
