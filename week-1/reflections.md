@@ -237,11 +237,11 @@ Bring a committed file back to staging:
 
 **Push commits to remote branch of same name (*branch-name*).origin is the cloned repository (in this case, phase-0-unit-1. branch-name is the local branch**
 
-> git push origin *branch-name*
+> git push origin *or* git push origin *branch-name*
 
 
 ##What is a pull request and how do you create and merge one?
-
+Let's suppose you and I are working on a project which is stored remotely, say, on GitHub. I have made a few changes locally and I have committed them. I am now ready for my changes to be merged into the remote project. I will push my changes to my public repository. Then I will send a request that my pushed commits be pulled into the remote project and merged.
 
 
 ##Why are pull requests preferred when working with teams?
