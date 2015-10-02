@@ -10,9 +10,7 @@ A snapshot of changes up to that moment. It's like "saving" your work.
 
 ##What are the best practices for commit messages?
 
-Use imperative, present tense.
-Add a description in the first line up to 50 characters.
-Leave an empty line and then provide a more detailed explanation of the changes purpose and how behavior of the program or file changes as a result.
+Use imperative, present tense. Add a description in the first line up to 50 characters. Leave an empty line and then provide a more detailed explanation of the changes purpose and how behavior of the program or file changes as a result.
 
 ##What does the HEAD^ argument mean?
 
