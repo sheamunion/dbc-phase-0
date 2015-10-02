@@ -202,10 +202,40 @@ Bring a committed file back to staging:
 
 
 ##Write a handy cheatsheet of the commands you need to commit your changes?
-###Make and move to a new feature-branch
 
-> git checkout -b [branch-name]
+**Check status of changes**
+
+> git status
+
+**Make and move to a new feature-branch**
+
+> git checkout -b *branch-name*
+
+**Add files that have been modified to the staging area:**
+
+> git add [filename]
+
+**Commit modified files:**
+
+> git commmit -v *or* git commit -m "*description of change*"
+
+**Bring a committed file back to staging:**
+
+> git reset --soft HEAD^
+
+**Delete a branch**
+
+> git branch -d *branch-name*
+
+**Push commits to remote repo**
+
+> git push origin *branch-name*
 
 
 ##What is a pull request and how do you create and merge one?
+
+
+
 ##Why are pull requests preferred when working with teams?
+
+
