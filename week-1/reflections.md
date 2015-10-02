@@ -235,7 +235,7 @@ Bring a committed file back to staging:
 
 >
 
-**Push commits to remote repo**
+**Push commits to remote branch of same name (*branch-name*).origin is the cloned repository (in this case, phase-0-unit-1. branch-name is the local branch**
 
 > git push origin *branch-name*
 
