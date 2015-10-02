@@ -227,9 +227,13 @@ Bring a committed file back to staging:
 
 > git branch -d *branch-name*
 
-**Push commits to remote repo**
+**Push commits to remote branch of matching name OR to *branch-name***
 
-> git push origin *branch-name*
+> git push origin *or* git push origin *branch-name*
+
+**Create a pull request.**
+
+> git request-pull origin master
 
 
 ##What is a pull request and how do you create and merge one?
