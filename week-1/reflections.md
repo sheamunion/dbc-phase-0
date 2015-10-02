@@ -235,7 +235,7 @@ Bring a committed file back to staging:
 
 >
 
-**Push commits to remote repo**
+**Push commits to remote repo where origin replaces the remote's URL and branch-name is the local branch**
 
 > git push origin *branch-name*
 
