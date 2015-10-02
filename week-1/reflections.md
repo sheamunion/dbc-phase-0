@@ -237,30 +237,32 @@ Bring a committed file back to staging:
 
 **Fetch any changes from the remote repo to my machine. NOTE: This WILL NOT automatically merge changes with my branch.**
 
-> git fetch origin *or* git fetch *remote-name*
+> git fetch origin
+> git checkout -b *working-branch* origin/*working-branch*
+> git merge master
 
-**Merge changes from remote to local**
+**Merge changes and update on GitHub**
 
-> git merge origin
-
-
+> git checkout master
+> git merge --no-ff *working-branch*
+> git push origin master
 
 
 ##What is a pull request and how do you create and merge one?
+
+A pull request is a process used to notify you or someone else that commits are ready to be merged into the upstream branch.
+
 Let's suppose you and I are working on a project which is stored remotely, say, on GitHub. I have cloned that repository to my computer and I have made a few changes locally. I have staged and committed those changes. I am now ready for my commits to be merged into the remote project.
 
 First, I will push my changes to my public repository using the command:
 
 > git push origin *branch-name*
 
-Then you will go to the repository in GitHub. You will see some text ("branch-name") and a green button ("Compare & pull request") in a box highlighted in yellow.
+Then I will go to my repository in GitHub. I will see some text, *branch-name*, and a green button, *Compare & pull request*, in a box highlighted in yellow. I click the green button.
 
-You then click the green button.
+I am now on a new page with a header "Open a pull request." On this page, I want to make sure that my **base: master** branch is selected in the left menu, and that my **working branch** (whatever I named it) is selected on the right menu. Basically, I will pull the branch in the right menu into the branch on the left menu. Before I click the "Create pull request" button at the bottom of the screen, I may want to udpdate the commit message.
 
-  will send a request that my pushed commits be pulled into the remote project. At that point you can see my pull request on GitHub, accept it by clicking the appropriate button, and then merge the versions by clicking the "Merge" button.
-
-
-
+After I click "Create pull requst", you may then merge the versions by clicking the green "Merge pull request" button. You will then have to click the green "Confirm merge" button. The pull request and merge should now be complete.
 
 ##Why are pull requests preferred when working with teams?
 
