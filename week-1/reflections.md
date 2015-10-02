@@ -85,37 +85,37 @@ Based on my very nascent and inexperienced understanding, I feel that the follow
 
 ##Can you remember what each of the following does of the top of your head? Write what each does
 
--pwd
+**- pwd**
 print working directory - prints the directory user is currently in.
 
--ls
+**- ls**
 list directory - lists the contents of the directory.
 
--mv
+**- mv**
 move directory - moves, or, rather, renames a file or directory
 
--cd
+**- cd**
 change directory - changes to specified directory
 
--../
+**- ../**
 I forgot what this one does. After looking it up, I learned that this command is used with “cd” to move up one directory in the tree.
 
--touch
+**- touch**
 creates an empty file
 
--mkdir
+**- mkdir**
 makes a new directory with specified name
 
--less
+**- less**
 displays content of a file, one screen-worth at a time. supports paging fwd and bwd through content.
 
--rmdir
+**- rmdir**
 remove directory - removes specified directory. will not remove a directory that contains files.
 
--rm
+**- rm**
 remove file - removes specified fiel. "rm -r” will recursively remove a file or directory (including subtree)
 
--help
+**- help**
 displays helpful information about commonly used commands. you can ask for more specific help by providing a pattern.
 
 
