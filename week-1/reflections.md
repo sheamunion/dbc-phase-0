@@ -180,10 +180,11 @@ Leave an empty line and then provide a more detailed explanation of the changes 
 This is the commit just before the commit you just made. If you want to move even further back in commits, you can use HEAD~3, HEAD~4, and so on.
 
 ##What are the 3 stages of a git change and how do you move a file from one stage to the other?
-modified - staged - committed
 
 **modified** = A vesion of a file that has been changed but not staged.
+
 **staged** = all modifications that have been added to the staging area.
+
 **committed** = all staged modifications that have been committed.
 
 Add a modified file to the staging area:
