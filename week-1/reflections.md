@@ -213,7 +213,7 @@ Bring a committed file back to staging:
 
 **Add files that have been modified to the staging area:**
 
-> git add [filename]
+> git add *filename*
 
 **Commit modified files:**
 
@@ -230,6 +230,10 @@ Bring a committed file back to staging:
 **Push commits to remote repo**
 
 > git push origin *branch-name*
+
+**Create a pull request for repo**
+
+> git request-pull *remote-fork* *local-branch*
 
 
 ##What is a pull request and how do you create and merge one?
