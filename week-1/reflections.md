@@ -160,3 +160,44 @@ I would fork a repo because I want to copy all of its contents to my profile. On
 ##What struggles did you have setting up git and GitHub? What did you learn in the process?
 
 Fortunately, I did not encounter any struggles when setting up git and GitHub. I did have to clarify the difference between “forking” and “creating” repos.
+
+#1.5 Tracking Changes Reflection
+
+##How does tracking and adding changes make developers' lives easier?
+
+##What is a commit?
+A snapshot of changes up to that moment. It's like "saving" your work.
+
+##What are the best practices for commit messages?
+Use imperative, present tense.
+Add a description in the first line up to 51 characters.
+Leave an empty line and then provide a more detailed explanation of the changes purpose and how behavior of the program or file changes as a result.
+
+##What does the HEAD^ argument mean?
+This is the commit just before the commit you just made. If you want to move even further back in commits, you can use HEAD~3, HEAD~4, and so on.
+
+##What are the 3 stages of a git change and how do you move a file from one stage to the other?
+modified - staged - committed
+
+**modified** = A vesion of a file that has been changed but not staged.
+**staged** = all modifications that have been added to the staging area.
+**committed** = all staged modifications that have been committed.
+
+We move files like this:
+
+stage a modified file:
+> git add [filename]
+commit staged files:
+> git commmit -v *OR* git commit -m "*description of change*"
+bring a committed file back to staging:
+> git reset --soft HEAD^
+
+
+##Write a handy cheatsheet of the commands you need to commit your changes?
+###Make and move to a new feature-branch
+> git checkout -b [branch-name]
+
+
+
+##What is a pull request and how do you create and merge one?
+##Why are pull requests preferred when working with teams?
