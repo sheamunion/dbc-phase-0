@@ -187,21 +187,14 @@ This is the commit just before the commit you just made. If you want to move eve
 
 **committed** = all staged modifications that have been committed.
 
-<<<<<<< HEAD
 Add files that have been modified to the staging area:
-=======
-Add a modified file to the staging area:
->>>>>>> c9bb51f8da9b903d3e95c7f75921c4e9631c1bae
 
 > git add [filename]
 
-Commit staged files:
 
-<<<<<<< HEAD
+Commit modified files:
+
 > git commmit -v *or* git commit -m "*description of change*"
-=======
-> git commmit -v *OR* git commit -m "*description of change*"
->>>>>>> c9bb51f8da9b903d3e95c7f75921c4e9631c1bae
 
 Bring a committed file back to staging:
 
@@ -212,8 +205,6 @@ Bring a committed file back to staging:
 ###Make and move to a new feature-branch
 
 > git checkout -b [branch-name]
->
-
 
 
 ##What is a pull request and how do you create and merge one?
