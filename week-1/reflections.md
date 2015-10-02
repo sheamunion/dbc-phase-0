@@ -227,13 +227,17 @@ Bring a committed file back to staging:
 
 > git branch -d *branch-name*
 
-**Push commits to remote branch of matching name OR to *branch-name***
+**Pull any changes from the remote repo to my machine. NOTE: This WILL NOT automatically merge changes with my branch.**
 
-> git push origin *or* git push origin *branch-name*
+> git fetch origin *or* git fetch *remote-name*
 
-**Create a pull request.**
+**Merge changes from remote to local**
 
-> git request-pull origin master
+> git merge origin
+
+**Push commits to remote branch of same name (*branch-name*).origin is the cloned repository (in this case, phase-0-unit-1. branch-name is the local branch**
+
+> git push origin *branch-name*
 
 
 ##What is a pull request and how do you create and merge one?
