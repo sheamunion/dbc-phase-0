@@ -227,6 +227,14 @@ Bring a committed file back to staging:
 
 > git branch -d *branch-name*
 
+**Pull any changes from the remote repo to my machine. NOTE: This WILL NOT automatically merge changes with my branch.**
+
+> git fetch *remote-name*
+
+**Merge changes from remote to local**
+
+>
+
 **Push commits to remote repo**
 
 > git push origin *branch-name*
