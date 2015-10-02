@@ -227,7 +227,15 @@ Bring a committed file back to staging:
 
 > git branch -d *branch-name*
 
-**Pull any changes from the remote repo to my machine. NOTE: This WILL NOT automatically merge changes with my branch.**
+**Push commits to remote branch of same name (*branch-name*).origin is the cloned repository (in this case, phase-0-unit-1. branch-name is the local branch**
+
+> git push origin *or* git push origin *branch-name*
+
+**Fetch and merge the remote branch into the local one**
+
+> git pull origin
+
+**Fetch any changes from the remote repo to my machine. NOTE: This WILL NOT automatically merge changes with my branch.**
 
 > git fetch origin *or* git fetch *remote-name*
 
@@ -235,13 +243,23 @@ Bring a committed file back to staging:
 
 > git merge origin
 
-**Push commits to remote branch of same name (*branch-name*).origin is the cloned repository (in this case, phase-0-unit-1. branch-name is the local branch**
 
-> git push origin *or* git push origin *branch-name*
 
 
 ##What is a pull request and how do you create and merge one?
-Let's suppose you and I are working on a project which is stored remotely, say, on GitHub. I have made a few changes locally and I have committed them. I am now ready for my changes to be merged into the remote project. I will push my changes to my public repository. Then I will send a request that my pushed commits be pulled into the remote project and merged.
+Let's suppose you and I are working on a project which is stored remotely, say, on GitHub. I have cloned that repository to my computer and I have made a few changes locally. I have staged and committed those changes. I am now ready for my commits to be merged into the remote project.
+
+First, I will push my changes to my public repository using the command:
+
+> git push origin *branch-name*
+
+Then you will go to the repository in GitHub. You will see some text ("branch-name") and a green button ("Compare & pull request") in a box highlighted in yellow.
+
+You then click the green button.
+
+  will send a request that my pushed commits be pulled into the remote project. At that point you can see my pull request on GitHub, accept it by clicking the appropriate button, and then merge the versions by clicking the "Merge" button.
+
+
 
 
 ##Why are pull requests preferred when working with teams?
