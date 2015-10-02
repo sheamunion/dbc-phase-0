@@ -124,18 +124,20 @@ displays helpful information about commonly used commands. you can ask for more 
 ##If you were going to write instructions for a new person on how to create a new repo, fork a repo, and clone a repo, what would they be?
 
 *Create a new repo*
+
 1. Go to your GitHub profile.
 2. Find the "+” button . It is located on the top right corner of the page, to the immediate left of your avatar. When you hover over the button, help text displays:  “Create new…"
 3. Click the “+” or “Create new…" button.
 4. Click “New repository”.
 5. You have a few options to configure your new repository:
-     1. Enter a name for your new repo. Make it short and memorable.
-     2. Select your preferred visibility: Public or Private.
-     3. Add an MIT License.
+  1. Enter a name for your new repo. Make it short and memorable.
+  2. Select your preferred visibility: Public or Private.
+  3. Add an MIT License.
 6. Click the “Create repository” button.
 7. You have successfully created a repository.
 
 *Fork a repo*
+
 1. On GitHub, navigate to the target repo that you want to fork.
 2. Once you’re in the repo, find the “Fork” button. It is located in the top right corner, immediately below your avatar.
 3. Click the “Fork” button.
@@ -143,11 +145,12 @@ displays helpful information about commonly used commands. you can ask for more 
 5. You have successfully forked a repo.
 
 *Clone a repo*
+
 1. Find the target repo’s clone URL.
-     1. Navigate to the repo in GitHub.
-     2. Once there, find the column on the right hand side—the one with options Code, Pull requests, Settings etc.
-     3. Locate the “HTTPS clone URL” label in this column.
-     4. Copy the provided URL
+  1. Navigate to the repo in GitHub.
+  2. Once there, find the column on the right hand side—the one with options Code, Pull requests, Settings etc.
+  3. Locate the “HTTPS clone URL” label in this column.
+  4. Copy the provided URL
 2. Open a new shell window.
 3. Change to the directory where you want to clone the target repo.
 4. Execute the following command: git clone [URL]. Replace [URL] with the clone URL of the target repo that you just copied.
@@ -177,25 +180,30 @@ Leave an empty line and then provide a more detailed explanation of the changes 
 This is the commit just before the commit you just made. If you want to move even further back in commits, you can use HEAD~3, HEAD~4, and so on.
 
 ##What are the 3 stages of a git change and how do you move a file from one stage to the other?
-modified - staged - committed
 
 **modified** = A vesion of a file that has been changed but not staged.
+
 **staged** = all modifications that have been added to the staging area.
+
 **committed** = all staged modifications that have been committed.
 
-We move files like this:
+Add files that have been modified to the staging area:
 
-stage a modified file:
 > git add [filename]
-commit staged files:
-> git commmit -v *OR* git commit -m "*description of change*"
-bring a committed file back to staging:
+
+Commit staged files:
+
+> git commmit -v *or* git commit -m "*description of change*"
+
+Bring a committed file back to staging:
+
 > git reset --soft HEAD^
 
 
 ##Write a handy cheatsheet of the commands you need to commit your changes?
 ###Make and move to a new feature-branch
 > git checkout -b [branch-name]
+>
 
 
 
