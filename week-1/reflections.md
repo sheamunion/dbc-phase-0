@@ -227,22 +227,42 @@ Bring a committed file back to staging:
 
 > git branch -d *branch-name*
 
-**Pull any changes from the remote repo to my machine. NOTE: This WILL NOT automatically merge changes with my branch.**
-
-> git fetch origin *or* git fetch *remote-name*
-
-**Merge changes from remote to local**
-
-> git merge origin
-
 **Push commits to remote branch of same name (*branch-name*).origin is the cloned repository (in this case, phase-0-unit-1. branch-name is the local branch**
 
 > git push origin *or* git push origin *branch-name*
 
+**Fetch and merge the remote branch into the local one**
+
+> git pull origin
+
+**Fetch any changes from the remote repo to my machine. NOTE: This WILL NOT automatically merge changes with my branch.**
+
+> git fetch origin
+> git checkout -b *working-branch* origin/*working-branch*
+> git merge master
+
+**Merge changes and update on GitHub**
+
+> git checkout master
+> git merge --no-ff *working-branch*
+> git push origin master
+
 
 ##What is a pull request and how do you create and merge one?
-Let's suppose you and I are working on a project which is stored remotely, say, on GitHub. I have made a few changes locally and I have committed them. I am now ready for my changes to be merged into the remote project. I will push my changes to my public repository. Then I will send a request that my pushed commits be pulled into the remote project and merged.
 
+A pull request is a process used to notify you or someone else that commits are ready to be merged into the upstream branch.
+
+Let's suppose you and I are working on a project which is stored remotely, say, on GitHub. I have cloned that repository to my computer and I have made a few changes locally. I have staged and committed those changes. I am now ready for my commits to be merged into the remote project.
+
+First, I will push my changes to my public repository using the command:
+
+> git push origin *branch-name*
+
+Then I will go to my repository in GitHub. I will see some text, *branch-name*, and a green button, *Compare & pull request*, in a box highlighted in yellow. I click the green button.
+
+I am now on a new page with a header "Open a pull request." On this page, I want to make sure that my **base: master** branch is selected in the left menu, and that my **working branch** (whatever I named it) is selected on the right menu. Basically, I will pull the branch in the right menu into the branch on the left menu. Before I click the "Create pull request" button at the bottom of the screen, I may want to udpdate the commit message.
+
+After I click "Create pull requst", you may then merge the versions by clicking the green "Merge pull request" button. You will then have to click the green "Confirm merge" button. The pull request and merge should now be complete.
 
 ##Why are pull requests preferred when working with teams?
 
