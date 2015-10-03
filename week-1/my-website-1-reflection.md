@@ -42,11 +42,11 @@ Good news: this service does exist. One implmentation of it is called GitHub and
 3. Change to the directory where you want to clone the target repo.
 4. Execute the following command and be sure to replace [URL] with the clone URL of the target repo that you just copied.
 
-> git clone [URL]
+  > git clone [URL]
 
 5. You should now have a clone of the target repo in the directory that you specificed. To confirm the repo was cloned, use the following command to list the contents of your directory. You should see the repo's name in the list.
 
-> ls
+  > ls
 
 6. Congrats! You cloned a repository!
 
