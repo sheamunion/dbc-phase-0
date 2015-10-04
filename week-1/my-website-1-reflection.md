@@ -53,11 +53,17 @@ Good news: this service does exist. One implmentation of it is called GitHub and
 
 ##Describe what open source means.
 
-Open source software is a term used to descibe software that is free and open to anyone who wants to read, use, or contribute to it. A great example of open source software is Wikipedia.
+Open source software is a term used to descibe software that is free and open to anyone who wants to read, use, or contribute to it. The source code must be provided and anyone must be able to build from it. A great example of open source software is Wikipedia. A few of the principles of open source are transparency and participation.
+
+Transparency: source code, bug fixes, reports, etc. are freely available to anyone and everyone who want's to see it.
+
+Participation: a healthy, vibrant, and growing community requires the participation of it's members. They can create new software, improve and update existing software, and answer questions. While it may seem that this soley benefits the open source community, there is another side to this coin. This act of participation can be understood as a requirement of joyful living for individuals. Think of a time in your life when you only received the fruits of other peoples efforts--you didn't give back or reciprocate. Recall how you felt in that period. Now, consider a time in your life when you actively spent your energy serving others--maybe cleaning the house as a family member or driving a friend to the airport, for example. Recall the effects of those acts on your wellbeing and self-worth. This is a key reason why participation is crucial. While it benefits the community and all its members, it also produces a salubrious effect on the individuals themselves.
+
+
 
 ##What do you think about Open Source? Does it make you nervous or protective? Does it feel like utopia?
 
-I feel that Open Source is a beautiful manifestation of the qualities of justice and unity. In this paradigm, everyone who learns how to program is empowered to contribute to the generation of knowledge, which propels the human race's development. In fact, true justice requires the participation of everyone in the generation of knowledge, for every one has something to offer. Unity is demonstrated when people of all races, genders, classes, and creeds can collaborate, regardless of circumstance, to achieve a vision and purpose.
+I feel that Open Source is a beautiful manifestation of the qualities of justice and unity. In the open source paradigm, everyone who learns how to program is empowered to contribute to the generation of knowledge, which propels the human race's development. In fact, true justice requires the universal participation of everyone in the generation of knowledge, for every one has something to offer. Unity is demonstrated when people of all races, genders, classes, and creeds can collaborate, regardless of circumstance, to achieve a vision and purpose.
 
 ##Assess the importance of using licenses.
 
