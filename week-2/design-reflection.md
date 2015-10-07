@@ -60,7 +60,7 @@ User experience (UX) is complex. Many factors influence UX--ergonomics, human-co
 
 UX is likely most valuable for complex systems.
 
-UX does not meet *every single* user's needs. It does its best to "design for specific experiences and promote certain behaviors."[^fn-UX_reference]
+UX does not meet *every single* user's needs. It does its best to ["design for specific experiences and promote certain behaviors."](http://www.smashingmagazine.com/2010/10/what-is-user-experience-design-overview-tools-and-resources/)
 
 UX is not the same as usability. Usability is a factor that informs or can impact UX.
 
@@ -84,7 +84,3 @@ UX is more important now than ever because users are so empowered by the accessi
 ##7. Which parts of the challenge did you find tedious?
 
 Information gatherig took me some time. I had to rewrite my answers several times. Although this was tedious, I enjoyed the process of fleshing out the purpose for my site. I am a giant proponent of the motto, "Plan the work, work the plan," so I was happy to spend so much time on this initial phase.
-
-
-
-[^fn-UX_reference]: [What Is User Experience Design? Overview, Tools And Resources](http://www.smashingmagazine.com/2010/10/what-is-user-experience-design-overview-tools-and-resources/)
