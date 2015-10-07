@@ -1,13 +1,13 @@
-![Shea's first site map](imgs/site-map.jpeg)
+![Shea's first site map](imgs/site-map1.jpg)
 
 ##1. What are the 6 Phases of Web Design?
 
-1. Information gathering
-2. Site planning
-3. Design
-4. Development
-5. Testing
-6. Maintenance
+1. Information gathering: choosing a purpose, goals, target audience, and content.
+2. Planning: creating a site map.
+3. Design: creating wireframs or images, mock-ups, choosing colors, fonts etc.
+4. Development: translate design into the HTML/CSS languages.
+5. Testing and Delivery: making sure it works, iterating, getting feedback.
+6. Maintenance: maintaining a project, improving it, updating it.
 
 
 ##2. What is your site's primary goal or purpose? What kind of content will your site feature?
@@ -60,7 +60,7 @@ User experience (UX) is complex. Many factors influence UX--ergonomics, human-co
 
 UX is likely most valuable for complex systems.
 
-UX does not meet *every single* user's needs. It does its best to "design for specific experiences and promote certain behaviors."[^fn-UX_reference]
+UX does not meet *every single* user's needs. It does its best to ["design for specific experiences and promote certain behaviors."](http://www.smashingmagazine.com/2010/10/what-is-user-experience-design-overview-tools-and-resources/)
 
 UX is not the same as usability. Usability is a factor that informs or can impact UX.
 
@@ -69,7 +69,7 @@ Although the return on investment in UX is not easily measureable due to its lar
 
 ##6. What is user experience design and why is it valuable?
 
-UX is *how a person feels* when *interfacing with a system*--be it a website, application, computer, phone etc.
+UX is *how a person feels* when *interfacing with a system*--be it a website, application, computer, phone etc. UX design (UXD) is the process of creating experiences that improve or satisfy the user's interaction with a system.
 
 Here are a few reasons why I think UX is extremely valuable. UX:
 
@@ -84,7 +84,3 @@ UX is more important now than ever because users are so empowered by the accessi
 ##7. Which parts of the challenge did you find tedious?
 
 Information gatherig took me some time. I had to rewrite my answers several times. Although this was tedious, I enjoyed the process of fleshing out the purpose for my site. I am a giant proponent of the motto, "Plan the work, work the plan," so I was happy to spend so much time on this initial phase.
-
-
-
-[^fn-UX_reference]: [What Is User Experience Design? Overview, Tools And Resources](http://www.smashingmagazine.com/2010/10/what-is-user-experience-design-overview-tools-and-resources/)
