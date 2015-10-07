@@ -2,12 +2,12 @@
 
 ##1. What are the 6 Phases of Web Design?
 
-1. Information gathering
-2. Site planning
-3. Design
-4. Development
-5. Testing
-6. Maintenance
+1. Information gathering: choosing a purpose, goals, target audience, and content.
+2. Planning: creating a site map.
+3. Design: creating wireframs or images, mock-ups, choosing colors, fonts etc.
+4. Development: translate design into the HTML/CSS languages.
+5. Testing and Delivery: making sure it works, iterating, getting feedback.
+6. Maintenance: maintaining a project, improving it, updating it.
 
 
 ##2. What is your site's primary goal or purpose? What kind of content will your site feature?
@@ -69,7 +69,7 @@ Although the return on investment in UX is not easily measureable due to its lar
 
 ##6. What is user experience design and why is it valuable?
 
-UX is *how a person feels* when *interfacing with a system*--be it a website, application, computer, phone etc.
+UX is *how a person feels* when *interfacing with a system*--be it a website, application, computer, phone etc. UX design (UXD) is the process of creating experiences that improve or satisfy the user's interaction with a system.
 
 Here are a few reasons why I think UX is extremely valuable. UX:
 
