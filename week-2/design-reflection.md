@@ -1,4 +1,4 @@
-![Shea's first site map](imgs/site-map.jpg)
+![Shea's first site map](imgs/site-map1.jpg)
 
 ##1. What are the 6 Phases of Web Design?
 
