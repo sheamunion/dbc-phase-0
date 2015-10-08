@@ -31,3 +31,8 @@ To be honest, I found my answers in the required reading and optional reading in
 ##6. Which parts of the challenge did you enjoy and which parts did you find tedious?
 
 I really enjoyed exploring other people's and companies' websites and blogs to gain inspiration. We can do *so many* different things with these tools and create *so many* different experiences and designs. It is really exciting to consider the possibilities. I enjoyed sketching thumbnails of wireframes. I also enjoyed creating my current wireframe in mockingbird. Of course, the final step of creating the digital wireframe in mockingbird got somewhat tedious just because I had to move so many elements and rename and resize each of them before I was happy with the result.
+
+
+
+![Wireframe Thumbnails 1](imgs/wireframe-thumbnails-1.jpg)
+![Wireframe Thumbnails 2](imgs/wireframe-thumbnails-2.jpg)
