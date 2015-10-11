@@ -84,3 +84,5 @@ UX is more important now than ever because users are so empowered by the accessi
 ##7. Which parts of the challenge did you find tedious?
 
 Information gatherig took me some time. I had to rewrite my answers several times. Although this was tedious, I enjoyed the process of fleshing out the purpose for my site. I am a giant proponent of the motto, "Plan the work, work the plan," so I was happy to spend so much time on this initial phase.
+
+<!-- This is just a test change-->
