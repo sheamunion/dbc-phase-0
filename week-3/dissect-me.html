@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Shea Munion, The Technical Blog of</title>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>Version Control, git, and GitHub</h1>
+        <h2>DBC Phase 0, Week 1</h2>
+        <time datetime="2015-10-03T16:00:00-05:00"> October 3, 2015 </time>
+      </header>
+      <section>
+        <h3>What are the benefits of version control?</h3>
+          <p>
+            There are a few key benefits of version control. Version control:
+          </p>
+          <ul>
+            <li>
+              documents a rich history of a project's life. This implies that changes to projects are tracked. This tracking, in turn, provides context for the evolution of a project, why it was steered along this path instead of a different path, that is especially useful to contributors who are new to the project.
+            </li>
+            <li>
+              allows contributors to safely rollback changes to projects. If a change to a project breaks the project, for example, it is relatively simple to remove that change and return to a stable version of the project.
+            </li>
+            <li>
+              provides accountability for changes to projects. Details of every change are documented and preserved throughout the project's life: when, what, why, and who made the change. Questions about certain changes can be directed to the individual responsible for them.
+            </li>
+            <li>
+              enables many indiviauls to collaborate on the same project at the same time and intelligently merge changes without blindly overriding each other's work.
+            </li>
+          </ul>
+      </section>
+      <section>
+        <h3>How does git help you keep track of changes?</h3>
+
+          <p>
+            Before I get to the details of how git helps us keep track of changes, I want to take a brief aside to share my personal experience learning about git. In particular, I want you to expose you to a specific term that is fundamental to git--although I won't define it yet. I just want you to know it's coming. The term is "commit." Yes, commit. As in, "You are committed," or, "Will you commit to reading this entire blog post today?" To be honest, when I first read the word in the context of git I pronounced it as "commet." Why? Because I couldn't fathom using such a formal word, a word used for such a determined, conscious human act, in such a technical context. "Computers make commitments?" In pracitce, leveraging this term for the action it carries out is expressly precise. Read on to learn more!
+          </p>
+          <p>
+            Consider how many specific content changes we may make in just one file, let alone to an entire project--delete this line in this file, in that file add this text, fix the formatting in those files--these changes can really add up. (I found it helpful to recall writing and editing group projects with team-mates using a word editor like MS Word.) Now, imagine trying to manually track all these changes--what they were, who made them, when, and why. You might spend as much time tracking changes as you do making changes! Exhausting. git shoulders the burden of managing the mundane and repetative tasks of tracking content changes so we don't have to do so ourselves. Since git is tracking of all of those fine details, we can spend more of our time on high level tasks--focusing on creating content, thinking about processes, providing feedback to colleagues, and more. Of course, git is a tool. We aren't entirely removed from the process of tracking changes. We have to learn how the tool works and how to best use it for our needs.
+          </p>
+      </section>
+      <section>
+          <h4> Three Layers or Areas</h4>
+            <p>
+              Specifically, git provides three "layers" or "areas" for content changes: a working area for new files and modified files, a staging area for files that have been modified and are ready to be committed (here's that term I told you about), and a repository where we have committed staged changes.
+            </p>
+            <p>
+              Before git can track changes in files, we have to tell git to begin tracking content changes in those files. Note: directories and files in a cloned repository are tracked automatically. It's new files that we need to notify git about. We do this using the "git add" command:
+            </p>
+            <code>
+              git add [file_name]
+            </code>
+            <p>
+              Once a file is being tracked, we can make all the changes to its content that we want. git will track these changes and keep the file in the "working" area or directory. When we are done making those changes, we can tell git that the file is ready to be moved or added to the staging area. Believe it or not, we will use the same command to move a file from the working area to the staging area.
+            </p>
+            <code>
+              git add [file_name]
+            </code>
+            <p>
+              Files in the staging area will be officially documented in our local repository once we commit them. "Commit them? Commit them to what?" I hear you asking. It's the very same question I, too, was asking when I first read about this process. Here's what I have come to understand: git takes snapshots of changes in file content when told to do so. This doesn't occur when we stage files using the "git add" command, as in the previous step. These snapshots are known as "commits"--as in, you're committing to this state of the file content. We can tell git to commit content changes to the repository by using the, you guessed it, "git commit" command.
+            </p>
+            <code>
+              git commit
+            </code>
+            <p>
+              When we execute that command, git will open a text file and prompt us to provide a description or message for that "commit"--that snapshot. This is known as a commit message. git requires the message before it continues executing the command. If you don't save the commit message, git will assume you don't want to continue the command and will abort. In fact, it will display:
+            </p>
+            <code>
+              Aborting commit due to empty commit message.
+            </code>
+            <p>
+              There is a shorthand of the commit command we can use to avoid opening a text file.
+            </p>
+            <code>
+              git commit -m "brief description of change"
+            </code>
+
+          <h4>git log</h4>
+
+              <p>
+                There is one really neat feature of git commits that I want to share with you. Every single time you execute a commit, that commit is logged. This means that you can review an entire history of committed changes to a file using the command:
+              </p>
+              <code>
+                git log
+              </code>
+              <p>
+                Each commit is treated as a unique package. The integrity of the contents of each commit is so important that commits are identified not by name or date, but by a cryptographic function called an SHA1 hash."
+              </p>
+      </section>
+      <section>
+        <h3>Why use GitHub to store your code?</h3>
+
+          <p>
+            There are three primary reasons we use GitHub to store code.
+          </p>
+          <ol>
+            <li>
+              GitHub is accessible. It's free, always on, and anyone, anywhere can access it.
+            </li>
+            <li>
+              GitHub is transparent. Everyone can see the activity of projects--people can learn from them and also contribute to them.
+            </li>
+            <li>
+              GitHub is collaborative. Because anyone, anywhere can use GitHub for free, and because the code is there for everyone to see, collaboration can germinate easily.
+            </li>
+          </ol>
+        </section>
+        <footer>
+          <p>
+            Copyright &copy; 2015 Shea Vahid Munion
+          </p>
+        </footer>
+    </article>
+  </body>
+</html>
+
+<!--
+##What HTML5 tags have you used in this challenge and continue to return to often? Why?
+
+- article
+- section
+- header
+- footer
+
+I use these often because they do such a good job of showing the purpose of whatever bit of content they are wrapping. The purpose of the content wrapped in a <header> tag is obvious: it serves as a header. Each of the HTML5 tags just make it easier to understand the overall structure of the document because they are so semantic.
+
+
+##How do elements get laid out on a page? What is the order the browser uses to display elements?
+
+Elements are displayed in order from first to last. So, the <body> tag will be displayed before the </body> tag; the <head> tag will be displayed before the <title> tag.
+
+##What did you learn about Sublime in this challenge? Do you think you'll create more handy snippets at a later date? What about research some shortcuts that already exist?
+
+I learned that I can create my own snippets! I may well create more snippets down the road. At present, I don't think I have a strong need to create unique snippets. I am sure that if I find myself repeating a lot of the same code frequently, I may create a snippet for that code. I have already researched one really useful shortcut: Command + p. You can use that to switch files!
+
+
+
+  -->
