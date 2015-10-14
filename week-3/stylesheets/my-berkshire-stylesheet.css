@@ -1,0 +1,16 @@
+body {
+  background-color: #ffffff;
+  color: #000080;
+}
+a:link {
+  color: #800080;
+}
+a:visited {
+  color: #ff0000;
+}
+.column-left {
+  float: left;
+}
+.column-right {
+  float: right;
+}
