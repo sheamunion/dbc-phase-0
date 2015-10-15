@@ -49,9 +49,6 @@ header {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
-.debug {
-  border: 1px solid red;
-}
 .test {
   position: relative;
   margin: 0px;
@@ -66,6 +63,3 @@ header {
 .copyright-name {
   font-weight: bold;
 }
-/*a, img {
-  display: block;
-}*/
