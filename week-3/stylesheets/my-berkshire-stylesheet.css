@@ -11,20 +11,22 @@ a:visited {
 }
 .column-left {
   float: left;
+  margin-left:5%;
 }
 .column-right {
-  float: right;
+  position: relative;
 }
 li {
   margin: 25px;
 }
 .descript {
   font-size: 10px;
+  display: block;
 }
 header {
   font-weight: bold;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #989898;
 }
 .drop-cap {
   font-size: 36px;
@@ -46,16 +48,16 @@ header {
   clear: both;
   font-size: 11px;
   text-align: center;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #989898;
+  border-bottom: 1px solid #989898;
 }
-.test {
+/*.test {
   position: relative;
   margin: 0px;
-}
+}*/
 .comment {
   font-size: 13px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #989898;
 }
 .copyright {
   font-size: 10px;
@@ -63,3 +65,30 @@ header {
 .copyright-name {
   font-weight: bold;
 }
+/*
+##What is important to know when linking an external file (like a stylesheet) to an HTML file?
+
+You must know the relative path of of the CSS file so the link is actually successful. You must also know what attributes to use for the link. For example, in the case of a stylesheet, you must use the href and the rel attributes.
+
+##What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+
+I don't think we used any tricks for positioning. I think we bashed our heads against the stylesheets and experimented with many properties to get our site the way it is now. It is close to the actual site, but, it is still doesn't look the same. It also doesn't behave the same when the browser is resized. We spent about 4.5 hours working on this together and decided to call it a session.
+
+##What CSS did you use to modify the element style (like size, color, etc.)
+
+font-size
+color
+font-family
+margin
+text-alignborder
+font-weight
+
+##Did you modify the HTML to include classes or ids? If so, which did you chose and why? If you didn't, how would you know which one to add to your HTML?
+
+Yes, oh yes. We used many classes and a few IDs. We used classes when we wanted to use a specific set of CSS property/values different elements. For example, we made a drop-cap class to style the "B" and "H" in the header as drop-caps. We used IDs when that set of CSS property/values should be applied to only one specific element. For example, our homepage ID was used to style only the last line of text in the header
+
+##When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+
+I believe our own site had cleaner code that followed best practices. The actual code base used many obsolete HTML elements like <font> and even implmented styles inline--both of which are bad practice. Our code, on the other hand, implemented HTML5 semantic elements and leveraged external styles.
+
+*/
