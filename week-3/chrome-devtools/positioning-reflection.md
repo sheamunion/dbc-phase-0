@@ -28,12 +28,27 @@ We can change the values of the following properties:
 
 I really enjoyed this challenge! Let me be clear, positioning with CSS is one of the most challenging skills I have learned so far this phase. But, I know that the only way to overcome challenges is by facing them head on. If I don't actually practice positioning with CSS, my practical understanding of positionging will never reach the level I need it to be. That is why I enjoyed this challenge. While a few exercises were particluarly elusive (3 and 4), I learned the most from them as we solved them.
 
+##Background Colors
 ![Background Colors](imgs/background-color.png)
+
+##Column
 ![Column](imgs/column.png)
+
+##Row
 ![Row](imgs/row.png)
+
+##Equisdistant
 ![Equidistant](imgs/equidistant.png)
+
+##Squares
 ![Squares](imgs/squares.png)
+
+##Footer
 ![Footer](imgs/footer.png)
+
+##Header
 ![Header](imgs/header.png)
+
+##Sidebar
 ![Sidebar](imgs/sidebar.png)
 
