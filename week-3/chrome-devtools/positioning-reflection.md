@@ -18,9 +18,26 @@ We can change the values of the following properties:
 
 ##3. What are the differences between Absolute, Fixed, Static, and Relative positioning? Which did you find easiest to use? Which was most difficult?
 
+Absolute: positions an element relative to it's first parent that has a position value that is *not* <code>static</code>.
+
+Fixed: positions an element relative to the browser window. i.e. a <code>fixed</code> element that is <code>left: 20px;</code> will place the element 20px from the left side of the browser.
+
+Static: this is the default position for elements. Elements with this <code>position</code> value appear as they would normally in the document flow.
+
+Relative: poitions an element relative to *its original* place in the document flow.
+
+I found absolute to be somewhat challenging simply because it doesn't feel intuitive to me. It requires me to know which parent elements are not static.
+
+Of couse, static is easy to use. But, after that, I think fixed is easier than relative or absolute because it has an easy to find reference point--the browser window!
 
 
 ##4. What are the differences between Margin, Border, and Padding?
+
+Margin: defines the space around an element, surrounding the border, padding and content. It is not visible.
+
+Border: defines the space between the margin and the padding. It can be visible.
+
+Padding: defines the space between the padding and the content of the element. It will dispaly the backgroudn color of the element.
 
 
 
@@ -51,4 +68,7 @@ I really enjoyed this challenge! Let me be clear, positioning with CSS is one of
 
 ##Sidebar
 ![Sidebar](imgs/sidebar.png)
+
+##Tic-tac-toe
+![Tic-tac-toe](imgs/tictactoe.png)
 
