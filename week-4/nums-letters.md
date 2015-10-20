@@ -27,3 +27,15 @@ p 10*8760*60 = 5256000 seconds
 ```
 
 ##Release 5
+
+**4.2.1**
+
+[Defining Variables](https://github.com/sheamunion/phase-0/blob/master/week-4/defining-variables.rb)
+
+**4.2.2**
+
+[Simple String](https://github.com/sheamunion/phase-0/blob/master/week-4/simple-string.rb)
+
+**4.2.3**
+
+[Basic Math](https://github.com/sheamunion/phase-0/blob/master/week-4/basic-math.rb)
