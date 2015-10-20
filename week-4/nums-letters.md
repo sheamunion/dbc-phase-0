@@ -1,17 +1,19 @@
 #4.2 Number, Letters, and Variable Assignments
 
-##What does puts do?
+##Release 1
+
+###What does puts do?
 
 <code>puts</code> will simply print the output to the console on a new line. It does not return anything.
 
-##What is an integer? What is a float?
+###What is an integer? What is a float?
 
 An integer is a number without decimals. e.g.: 1, 900, and -53562 are all integers.
 
 A float is a number with decimals. e.g.: 1.49, 53.90, and -0.312 are all floats.
 
 
-##What is the difference between float and integer division? How would you explain the difference to someone who doesn't know anything about programming?
+###What is the difference between float and integer division? How would you explain the difference to someone who doesn't know anything about programming?
 
 *Note: I assume the reader doesn't know anything about programming but s/he does know basic mathematics terminology.*
 
@@ -39,3 +41,38 @@ p 10*8760*60 = 5256000 seconds
 **4.2.3**
 
 [Basic Math](https://github.com/sheamunion/phase-0/blob/master/week-4/basic-math.rb)
+
+##Release 7
+
+###How does Ruby handle addition, subtraction, multiplication, and division of numbers?
+
+Is this a trick question? I am not sure how to answer this one. Ruby handles these operations as I would handle them. Addition is addition, subtraction is subtraction, etc. I am not sure what learning competency this question is designed to assess. Perhaps it can be rewritten more explcitly.
+
+###What is the difference between integers and floats?
+
+Read answers on lines 11 & 13, above. #DRY
+
+###What is the difference between integer and float division?
+
+Read answer on line 20, above. #DRY
+
+###What are strings? Why and when would you use them?
+
+Strings are objects that contain characters like letters, digits, punctuation etc. Strings are different from numbers. The arithmetic we use on numbers (like integers or floats) does not work the same way on strings. For example, when we use the addition operator on two strings, it concatenates them--it does not 'add' them like it would two numbers.
+
+```ruby
+  > puts '4' + '5'
+  > 45
+  > puts 4 + 5
+  > 9
+```
+
+We use strings to work with text. For example, we may want to prompt a user to do something, like provide a user name or password. In such a case, we would use a string for the prompt and store the user name and passwords as strings. We do this because it makes sense to treat such content as text and not as numbers. We don't expect to perform numeric arithmetic on a user name.
+
+###What are local variables? Why and when would you use them?
+
+Local variables are those that exist only in the method in which they are defined. They cannot be updated or referred to outside that method.
+
+###How was this challenge? Did you get a good review of some of the basics?
+
+This challenge was quite simple. I did not require much time or problem solving to complete the exercises. I feel that this has been a good refresher of Ruby syntax. I am happy that I bought the book "Learn to Program", Second Edition.
