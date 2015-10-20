@@ -50,11 +50,11 @@ Is this a trick question? I am not sure how to answer this one. Ruby handles the
 
 ###2. What is the difference between integers and floats?
 
-Read answers for Release 2, #2, above. #DRY
+Read answers for Release 1, #2, above. #DRY
 
 ###3. What is the difference between integer and float division?
 
-Read answer for Release 2, #3, above. #DRY
+Read answer for Release 1, #3, above. #DRY
 
 ###4. What are strings? Why and when would you use them?
 
