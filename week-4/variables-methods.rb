@@ -14,8 +14,11 @@ better_number = number.to_i + 1
 puts "That is a nice number, but not as awesome as " + better_number.to_s + "!"
 
 
-puts '[My 4.3.1 solution](https://github.com/sheamunion/phase-0/blob/master/week-4/define-method/my_solution.rb)'
-puts '[My 4.3.2 solution](https://github.com/sheamunion/phase-0/blob/master/week-4/math/my_solution.rb)'
+# FIND MY SOLUTION TO 4.3.1 HERE:
+https://github.com/sheamunion/phase-0/blob/master/week-4/define-method/my_solution.rb
+
+# FIND MY SOLUTION TO 4.3.2 HERE:
+https://github.com/sheamunion/phase-0/blob/master/week-4/math/my_solution.rb
 
 
 # How do you define a local variable?
