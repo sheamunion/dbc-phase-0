@@ -56,7 +56,7 @@ Read answers for Release 2, #2, above. #DRY
 
 Read answer for Release 2, #3, above. #DRY
 
-###What are strings? Why and when would you use them?
+###4. What are strings? Why and when would you use them?
 
 Strings are objects that contain characters like letters, digits, punctuation etc. Strings are different from numbers. The arithmetic we use on numbers (like integers or floats) does not work the same way on strings. For example, when we use the addition operator on two strings, it concatenates them--it does not 'add' them like it would two numbers.
 
@@ -69,10 +69,10 @@ Strings are objects that contain characters like letters, digits, punctuation et
 
 We use strings to work with text. For example, we may want to prompt a user to do something, like provide a user name or password. In such a case, we would use a string for the prompt and store the user name and passwords as strings. We do this because it makes sense to treat such content as text and not as numbers. We don't expect to perform numeric arithmetic on a user name.
 
-###What are local variables? Why and when would you use them?
+###5. What are local variables? Why and when would you use them?
 
 Local variables are those that exist only in the method in which they are defined. They cannot be updated or referred to outside that method.
 
-###How was this challenge? Did you get a good review of some of the basics?
+###6. How was this challenge? Did you get a good review of some of the basics?
 
 This challenge was quite simple. I did not require much time or problem solving to complete the exercises. I feel that this has been a good refresher of Ruby syntax. I am happy that I bought the book "Learn to Program", Second Edition.
