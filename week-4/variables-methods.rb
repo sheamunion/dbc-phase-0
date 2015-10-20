@@ -25,7 +25,8 @@ https://github.com/sheamunion/phase-0/blob/master/week-4/math/my_solution.rb
 # => Simply type the variable name and assign it an object. Be sure to use the = sign and proper naming convention. i.e. first_name = "David"
 
 # How do you define a method?
-# => Begin by writing "def" followed by the method name followed by the arguments it accepts. You may wrap the parameters in parantheses and be sure to separate them with commas. Be sure to end the method by writing "end" after the body of the method. i.e. # def add(num1, num2)
+# => Begin by writing "def" followed by the method name followed by the arguments it accepts. You may wrap the parameters in parantheses and be sure to separate them with commas. Be sure to end the method by writing "end" after the body of the method. i.e.
+# def add(num1, num2)
 # end
 
 # What is the difference between a local variable and a method?
