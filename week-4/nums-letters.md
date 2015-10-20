@@ -2,18 +2,18 @@
 
 ##Release 1
 
-###What does puts do?
+###1. What does puts do?
 
 <code>puts</code> will simply print the output to the console on a new line. It does not return anything.
 
-###What is an integer? What is a float?
+###2. What is an integer? What is a float?
 
 An integer is a number without decimals. e.g.: 1, 900, and -53562 are all integers.
 
 A float is a number with decimals. e.g.: 1.49, 53.90, and -0.312 are all floats.
 
 
-###What is the difference between float and integer division? How would you explain the difference to someone who doesn't know anything about programming?
+###3. What is the difference between float and integer division? How would you explain the difference to someone who doesn't know anything about programming?
 
 *Note: I assume the reader doesn't know anything about programming but s/he does know basic mathematics terminology.*
 
@@ -44,17 +44,17 @@ p 10*8760*60 = 5256000 seconds
 
 ##Release 7
 
-###How does Ruby handle addition, subtraction, multiplication, and division of numbers?
+###1. How does Ruby handle addition, subtraction, multiplication, and division of numbers?
 
 Is this a trick question? I am not sure how to answer this one. Ruby handles these operations as I would handle them. Addition is addition, subtraction is subtraction, etc. I am not sure what learning competency this question is designed to assess. Perhaps it can be rewritten more explcitly.
 
-###What is the difference between integers and floats?
+###2. What is the difference between integers and floats?
 
-Read answers on lines 11 & 13, above. #DRY
+Read answers for Release 2, #2, above. #DRY
 
-###What is the difference between integer and float division?
+###3. What is the difference between integer and float division?
 
-Read answer on line 20, above. #DRY
+Read answer for Release 2, #3, above. #DRY
 
 ###What are strings? Why and when would you use them?
 
