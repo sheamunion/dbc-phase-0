@@ -12,8 +12,32 @@
 
 # Your Solution Below
 def smallest_integer(list_of_nums)
-  if list_of_nums == ""
+#If the array is empty, return 'nil'.
+  a = list_of_nums[0]
+  b = list_of_nums[1]
+  c = list_of_nums[2]
+
+  if list_of_nums == []
     return nil
+  elsif list_of_nums.size == 1
+    return list_of_nums[0]
+  elsif a < b
+    if a < c
+      return a
+    else
+      return c
+    end
+  elsif b < c
+    return b
   else
-    list_of_nums
+    return c
+  end
 end
+
+#I want to compare the first value (a, index 0) with second item (b, index 1) to determine which is smaller.
+
+#If a is smaller, compare it to the third item (c, index 2).
+
+#If b is smaller, compare it to the third item (c, index 2).
+
+#Repeat until all values have been compared. Keep the value of the smallest item.
