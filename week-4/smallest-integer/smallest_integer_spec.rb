@@ -1,6 +1,7 @@
 require_relative "my_solution"
 
 describe 'smallest_integer' do
+
   it "returns nil when the array is empty ([])" do
     expect(smallest_integer([])).to be_nil
   end
