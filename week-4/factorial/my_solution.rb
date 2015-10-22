@@ -73,22 +73,4 @@ end
 #     i = i - 1
 #     p x
 #   end
-
-
-
-# end
-
-
-
-# factorial(5)
-
-# for i in 1..50
-#     print i
-# end
-
-
-# i = 1
-# while i <= 50 do
-#     print i
-#     i += 1
 # end
