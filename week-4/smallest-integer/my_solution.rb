@@ -48,21 +48,23 @@ def smallest_integer(list_of_nums)
   c = list_of_nums[2]
 
   if list_of_nums == []
-    return nil
+    p nil
   elsif list_of_nums.length == 1
-    return list_of_nums[0]
+    p list_of_nums[0]
   elsif a < b
     if a < c
-      return a
+      p a
     else
-      return c
+      p c
     end
   elsif b < c
-    return b
+    p b
   else
-    return c
+    p c
   end
 end
+
+smallest_integer([-10,-40,-20])
 
 =end #======FIRST ATTEMPT=====<
 
@@ -117,3 +119,29 @@ end
 smallest_integer([0, -10, 0, 100])
 
 =end #======SECOND ATTEMPT======<
+
+def smallest_integer(list_of_nums)
+  if list_of_nums == []
+    p nil
+  elsif list_of_nums.length == 1
+    p list_of_nums[0]
+  else
+
+    counter = 1
+    first_value = 0
+
+    while counter < list_of_nums.length
+      if list_of_nums[first_value] < list_of_nums[counter]
+        output = list_of_nums[first_value]
+      else
+        first_value += 1
+        if list_of_nums[first_value] < list_of_nums[counter]
+          output = list_of_nums[first_value]
+        end
+      end
+      counter += 1
+    end
+    p output
+  end
+end
+
