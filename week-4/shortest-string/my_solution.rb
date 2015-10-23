@@ -32,9 +32,7 @@ IF the INPUT is not empty
   END the loop
 END the if statement
 
-
 =end #======PSEUDOCODE 1======
-
 
 #=begin ======Initial Solution======
 
@@ -60,10 +58,10 @@ def shortest_string(list_of_words)
   end
 end
 
-
 #=end  #======Initial Solution======
 
-
 #=begin ======Refactored Solution======
+
+
 
 #=end #======Refactored Solution======
