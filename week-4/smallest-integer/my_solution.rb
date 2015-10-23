@@ -11,15 +11,45 @@
 # If +list_of_nums+ is empty the method should return nil
 
 # Your Solution Below
+
+=begin >======ORIGINAL PSEUDOCODE======
+
+IF the first value of array is smaller than the second value
+  IF the first is smaller than the third value
+    IF the first is smaller than the fourth value (and so on)
+      OUTPUT the first value
+    ELSE
+      OUTPUT the fourth value
+    END
+  ELSIF the third value is smaller than the fourth value
+    OUTPUT the third value
+  ELSE
+    OUTPUT the fourth value
+  END
+ELSIF the second value is smaller than the third value
+  IF the second value is smaller than the fourth value
+    OUTPUT the second value
+  ELSE
+    OUTPUT the fourth value
+  END
+ELSIF the third value is smaller than the fourth value
+  OUTPUT the thrid value
+ELSE
+  OUTPUT the fourth value
+END
+
+=end #======ORIGINAL PSEUDOCODE======<
+
+=begin >======FIRST ATTEMPT=====
+
 def smallest_integer(list_of_nums)
-#If the array is empty, return 'nil'.
   a = list_of_nums[0]
   b = list_of_nums[1]
   c = list_of_nums[2]
 
   if list_of_nums == []
     return nil
-  elsif list_of_nums.size == 1
+  elsif list_of_nums.length == 1
     return list_of_nums[0]
   elsif a < b
     if a < c
@@ -34,10 +64,56 @@ def smallest_integer(list_of_nums)
   end
 end
 
-#I want to compare the first value (a, index 0) with second item (b, index 1) to determine which is smaller.
+=end #======FIRST ATTEMPT=====<
 
-#If a is smaller, compare it to the third item (c, index 2).
+=begin >======REFINED PSEUDOCODE======
 
-#If b is smaller, compare it to the third item (c, index 2).
+INPUT: GET a series of integers (as an array)
+OUTPUT: RETURN smallest intger of array (an integer)
 
-#Repeat until all values have been compared. Keep the value of the smallest item.
+CREATE a counter for the WHILE loop
+
+IF the array is empty, return 'nil'.
+
+ELSIF the array has only one value, return that value.
+
+ELSE
+  WHILE counter is less than the length of the array
+    compare current integer (array[counter]) with the next integer (array[counter+1])
+    IF current integer is smaller
+      store that in OUTPUT
+    ELSE
+      store the next integer in OUTPUT
+    END
+    increase the counter by 1
+  END
+  return OUTPUT
+END
+
+=end #======REFINED PSEUDOCODE======<
+
+=begin >======SECOND ATTEMPT======
+
+def smallest_integer(list_of_nums)
+  counter = 1
+  if list_of_nums == []
+    return nil
+  elsif list_of_nums.length == 1
+    return list_of_nums[0]
+  else
+    while counter < list_of_nums.length
+      value1 = list_of_nums[0]
+      if value1 < list_of_nums[counter] == true
+        output = value1
+      else
+        output = list_of_nums[counter]
+      end
+      counter += 1
+    end
+      p output
+  end
+end
+
+smallest_integer([0, -10, 0, 100])
+
+=end #======SECOND ATTEMPT======<
