@@ -23,7 +23,7 @@ ELSE
 =end #======PSEUDOCODE 1======
 
 
-=begin ======Initial Solution======
+#=begin ======Initial Solution======
 
 def array_concat(array_1, array_2)
   output = array_1
@@ -37,7 +37,7 @@ def array_concat(array_1, array_2)
   end
 end
 
-=end  #======Initial Solution======
+#=end  #======Initial Solution======
 
 #=begin ======Refactored Solution======
 
@@ -45,10 +45,8 @@ def array_concat(array_1, array_2)
   if array_1 == [] && array_2 == []
     return array_1
   else
-    array_1.concat(array_2)
-    return array_1
+    return array_1.concat(array_2)
   end
 end
-
 
 #=end #======Refactored Solution======
