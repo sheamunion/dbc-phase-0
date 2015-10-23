@@ -144,4 +144,3 @@ def smallest_integer(list_of_nums)
     p output
   end
 end
-
