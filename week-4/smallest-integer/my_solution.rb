@@ -92,35 +92,39 @@ END
 
 =end #======REFINED PSEUDOCODE======<
 
-#=begin >======SECOND ATTEMPT======
+#=begin >======WORKING FOURTH ATTEMPT======
 
 def smallest_integer(list_of_nums)
-
   length = list_of_nums.length
-
   if length == 0
-
     return nil
-
   elsif length == 1
-
     return list_of_nums[0]
-
   else
-    counter = 1
-    number = 0
-    target = 1
-    while counter <= length
-      if list_of_nums[number] < list_of_nums[target]
-        output = list_of_nums[number]
-        target += 1
+    a = 0
+    b = 1
+    while b < length
+      if list_of_nums[a] < list_of_nums[b]
+        output = list_of_nums[a]
+        b += 1
       else
-        output = list_of_nums[target]
-        number += 1
+        output = list_of_nums[b]
+        a = b
+        b += 1
       end
-      counter += 1
-      return output
     end
+    return output
   end
 end
-#=end #======SECOND ATTEMPT======<
+#=end #======WORKING FOURTH ATTEMPT======<
+
+#=begin #======REFACTORED SOLUTION======<
+def smallest_integer(list_of_nums)
+  length = list_of_nums.length
+  if length == 0
+    return nil
+  else
+    list_of_nums.min
+  end
+end
+#=end #======REFACTORED SOLUTION======<
