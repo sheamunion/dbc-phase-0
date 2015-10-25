@@ -21,16 +21,7 @@ OUTPUT:
 =end #======PSEUDOCODE 1======
 
 
-#=begin ======Initial Solution======
-
-#=end  #======Initial Solution======
-
-
-#=begin ======Refactored Solution======
-
-#=end #======Refactored Solution======
-
-
+=begin ======Initial Solution DOESN'T WORK ======
 def longest_string(list_of_words)
   if list_of_words == []
     return nil
@@ -51,3 +42,43 @@ def longest_string(list_of_words)
     return list_of_words[target]
   end
 end
+=end  #======Initial Solution DOESN'T WORK======
+
+#=begin ======SECOND ATTEMPT WORKING======
+def longest_string(list_of_words)
+  length = list_of_words.length
+  if list_of_words == []
+    return nil
+  elsif length == 1
+    return list_of_words[0]
+  else
+    a = 0
+    b = 1
+    while b < length
+      if list_of_words[a].length > list_of_words[b].length
+        output = list_of_words[a]
+        b += 1
+      else
+        output = list_of_words[b]
+        a = b
+        b += 1
+      end
+    end
+    return output
+  end
+end
+
+#=end #======SECOND ATTEMPT WORKING======
+
+#=begin #======REFACTORED SOLUTION WORKING======
+def longest_string(list_of_words)
+  length = list_of_words.length
+  if list_of_words == []
+    return nil
+  else
+    list_of_words.max_by { |x| x.length }
+  end
+end
+
+
+#=end #======REFACTORED SOLUTIONWORKING======

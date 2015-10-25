@@ -34,7 +34,7 @@ END the if statement
 
 =end #======PSEUDOCODE 1======
 
-#=begin ======Initial Solution======
+=begin ======Initial Solution DOES NOT WORK======
 
 def shortest_string(list_of_words)
   if list_of_words == []
@@ -58,10 +58,43 @@ def shortest_string(list_of_words)
   end
 end
 
-#=end  #======Initial Solution======
+=end  #======Initial Solution======
 
-#=begin ======Refactored Solution======
+#=begin ======SECOND ATTEMPT WORKING======
+def shortest_string(list_of_words)
+  length = list_of_words.length
+  if list_of_words == []
+    return nil
+  elsif length == 1
+    return list_of_words[0]
+  else
+    a = 0
+    b = 1
+    while b < length
+      if list_of_words[a].length < list_of_words[b].length
+        output = list_of_words[a]
+        b += 1
+      else
+        output = list_of_words[b]
+        a = b
+        b += 1
+      end
+    end
+    return output
+  end
+end
+
+#=end #======SECOND ATTEMPT WORKING======
+
+#=begin #======REFACTORED SOLUTION WORKING======
+def shortest_string(list_of_words)
+  length = list_of_words.length
+  if list_of_words == []
+    return nil
+  else
+    list_of_words.min_by { |x| x.length }
+  end
+end
 
 
-
-#=end #======Refactored Solution======
+#=end #======REFACTORED SOLUTIONWORKING======
