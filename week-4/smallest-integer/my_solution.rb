@@ -64,8 +64,6 @@ def smallest_integer(list_of_nums)
   end
 end
 
-smallest_integer([-10,-40,-20])
-
 =end #======FIRST ATTEMPT=====<
 
 =begin >======REFINED PSEUDOCODE======
@@ -94,53 +92,35 @@ END
 
 =end #======REFINED PSEUDOCODE======<
 
-=begin >======SECOND ATTEMPT======
+#=begin >======SECOND ATTEMPT======
 
 def smallest_integer(list_of_nums)
-  counter = 1
-  if list_of_nums == []
+
+  length = list_of_nums.length
+
+  if length == 0
+
     return nil
-  elsif list_of_nums.length == 1
+
+  elsif length == 1
+
     return list_of_nums[0]
+
   else
-    while counter < list_of_nums.length
-      value1 = list_of_nums[0]
-      if value1 < list_of_nums[counter] == true
-        output = value1
-      else
-        output = list_of_nums[counter]
-      end
-      counter += 1
-    end
-      p output
-  end
-end
-
-smallest_integer([0, -10, 0, 100])
-
-=end #======SECOND ATTEMPT======<
-
-def smallest_integer(list_of_nums)
-  if list_of_nums == []
-    p nil
-  elsif list_of_nums.length == 1
-    p list_of_nums[0]
-  else
-
     counter = 1
-    first_value = 0
-
-    while counter < list_of_nums.length
-      if list_of_nums[first_value] < list_of_nums[counter]
-        output = list_of_nums[first_value]
+    number = 0
+    target = 1
+    while counter <= length
+      if list_of_nums[number] < list_of_nums[target]
+        output = list_of_nums[number]
+        target += 1
       else
-        first_value += 1
-        if list_of_nums[first_value] < list_of_nums[counter]
-          output = list_of_nums[first_value]
-        end
+        output = list_of_nums[target]
+        number += 1
       end
       counter += 1
+      return output
     end
-    p output
   end
 end
+#=end #======SECOND ATTEMPT======<
