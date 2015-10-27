@@ -1,7 +1,7 @@
 =begin
 # Calculate the mode Pairing Challenge
 
-# I worked on this challenge [by myself, with: ]
+# I worked on this challenge [with: Alan Alcesto]
 
 # I spent [] hours on this challenge.
 
@@ -27,29 +27,9 @@ CREATE a most_frequent array and set it equal to the array argument
 
 # 1. Initial Solution
 =end
-
 def mode(array)
-  histogram = Hash.new
 
-  array.each do |item|
-    histogram[item] = 0
-  end
-
-  array.each do |item|
-    histogram[item] += 1
-  end
-
-  histogram.each do |key, val|
-    puts "#{key}:#{val}"
-  end
-
-
-  #NOW I WANT TO MOVE THE KEY(S) WITH THE HIGHEST VALUE(S) INTO AN ARRAY
-  #THEN I WANT TO RETURN THAT ARRAY
 end
-
-# mode([1,2,3,3,-2,"cat", "dog", "cat"])
-mode(["who", "what", "where", "who"])
 
 
 # 3. Refactored Solution
