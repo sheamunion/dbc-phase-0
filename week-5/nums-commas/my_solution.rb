@@ -1,7 +1,7 @@
 =begin
 # Numbers to Commas Solo Challenge
 
-# I spent [] hours on this challenge.
+# I spent 1.83 hours on this challenge.
 
 # Complete each step below according to the challenge directions and
 # include it in this file. Also make sure everything that isn't code
@@ -51,10 +51,24 @@ def separate_comma(integer)
   end
   return num
 end
-
+=begin
 # 2. Refactored Solution
 
-#This is my first refactored solution
+========This is my FIRST refactored solution=====
+I want to be able to append a comma at specific intervals in the string, for example, after every third item. I can't do that if I start from left to right of the string because I don't know how long the string will be. Therefore, I have to reverse the string and start at the true zeroth position of any length integer. I am now working from the left and I can easily find the third item, sixth item and so on.
+
+CREATE a variable num and set it EQUAL to integer, convert it TO A STRING, and REVERSE the string.
+CREATE variable length and set it EQUAL to the length of the string
+  IF the length of the string is 4, 5, OR 6 (i.e. integer is a 4, 5, or 6 digit number)
+    APPEND a comma after the third item in the string
+  IF the length of the string is 7 OR 8
+    APPEND a comma after the third item in the string
+    APPEND a comma after the seventh item in the string
+  END the if statement
+REVERSE the updated string and RETURN it
+
+=end
+
 def separate_comma(integer)
   num = integer.to_s.reverse
   length = num.length
@@ -66,14 +80,17 @@ def separate_comma(integer)
   end
   return num.reverse
 end
+=begin
+ ========This is my SECOND refactored solution=====
 
-#This is my second refactored solution
-  #   I now have an array of single elements from
-  #   For every fourth item in the array, (this would be at index 3, 6, 9 etc.)
-  #   I want to add a comma to that item
-  #   and continue doing so until I reach the end of the array
-  #   Finally, I want to reverse the array and turn it back into a string
-
+  SPLIT every character in the string into a separate element in an array
+  REVERSE the array for the same reason noted in my first refactored solution
+  FOR every fourth item in the array, (this would be at index 3, 6, 9 etc.)
+    ADD a comma to that item
+  REPEAT until each item is accounted for
+  REVERSE the array and turn it back into a string
+  RETURN the string
+=end
 def separate_comma(integer)
   num = integer.to_s.split("").reverse
   item_index = 0
