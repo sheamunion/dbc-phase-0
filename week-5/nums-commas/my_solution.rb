@@ -15,23 +15,21 @@
   - a comma-spearated integer as a string
 # What are the steps needed to solve the problem?
 
-CREATE a method called separate_comma that accepts a positive integer
-  CREATE a variable called num and set it equal to the integer as a string
+CREATE a process that accepts a positive number
+  CHANGE the number into a string
   IF the string is four characters long
-    APPEND a comma after the zeroth index
+    APPEND a comma after the first character in the string
   ELSIF the string is five characters long
-    APPEND a comma after the first index
+    APPEND a comma after the second character in the string
   ELSIF the string is six characters long
-    APPEND a comma after the second index
+    APPEND a comma after the third character in the string
   ELSIF the string is seven characters long
-    APPEND a comma after the zeroth index
-    APPEND a comma after the fourth index
+    APPEND a comma after the first character in the string
+    APPEND a comma after the fifth character in the string
   ELSIF the string is eight characters long
-    APPEND a comma after the first index
-    APPEND a comma after the fifth index
-  END
-  RETURN the variable num
-END
+    APPEND a comma after the second character in the string
+    APPEND a comma after the sixth character in the string
+  RETURN the string
 # 1. Initial Solution
 =end
 def separate_comma(integer)
