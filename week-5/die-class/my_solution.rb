@@ -79,15 +79,15 @@ I implmented the "attr_reader" and the "rand" methods. Both were easy to use. In
 
 What is a Ruby class?
 
-Technically, a class is an instance of the Class class. As with everything else in Ruby, classes are objects. Classes are the only kind of object that can spawn new objects. Most classes consist of collections of variables and methods.
+Technically, a class is an instance of the Class class. As with everything else in Ruby, classes are objects. Classes are the only kind of object that can spawn new objects. Most classes consist of collections of attributes (variables) and behaviors (methods).
 
 Conceptually, a class is like a blueprint. It has all the schematics for creating and manipulating *instances* of itself.
 
-For example, the specific car I drive can be thought of as an instance of a class called Car. Every instance of a car has the same characteristics (although not necessarily the same values) and can do the same things. The Car class can describe manufacturer, color, model name, engine size, trim level, fuel tank capacity, oil levels, mpg rating etc. We can do things to instances of the Car class like change their current fuel and oil levels, change their color, drive them, park them, and so on.
+For example, the specific car I drive can be thought of as an instance of a class called Car. Every instance of a car has the same attributes (although not necessarily the same values) and has the same behaviors. The Car class can describe manufacturer, color, model name, engine size, trim level, fuel tank capacity, oil levels, mpg rating etc. We can do things to instances of the Car class like change their current fuel and oil levels, change their color, drive them, park them, and so on.
 
 Why would you use a Ruby class?
 
-Classes are really useful when we want to create many objects that have the same characteristics and can do the same things. Classes give us the ability to easily create any number of objects with built-in variables and methods. If we don't use classes, we would need to create objects for every variable (i.e. car1_color, car2_color). Also, every object we create wouldn't be able to respond to a message. Classes empower us to do acheive comlex and innovative tasks. With classes, we can begin to model our world and to create new worlds limited only by our imagination.
+Classes are really useful when we want to create many objects that have the same attributes and behaviors. Classes give us the ability to easily create any number of objects with built-in variables and methods. Classes empower us to do acheive comlex and innovative tasks. With classes, we can begin to model our world and to create new worlds limited only by our imagination.
 
 For example, if we want to create a database of cars in a parking lot, we could type the following:
 
@@ -107,9 +107,9 @@ For example, if we want to create a database of cars in a parking lot, we could 
   p change_color(car1_color, "Yellow") # => "Yellow"
   p change_color(car2_color, "Green") # => "Green"
 
-However, imagine doing this for 100 cars. If we only stick with three variables (color, make, model), we will end up creatng 300 individual variables. Of course, we would probably leverage some iteration to accomplish that task. Regardless, this is not very DRY. Furthermore, it doesn't quite align with our conceptual understanding. A car is a collection of characteristics and functions. A car is not "car color red." A car *is* red.
+However, imagine doing this for 100 cars. If we only stick with three variables (color, make, model), we will end up creatng 300 individual variables. Of course, we would probably leverage some iteration to accomplish that task. Regardless, this is not very DRY. Furthermore, it doesn't quite align with our conceptual understanding. A car is a collection of attributes and behaviors. A car's color is not "car color red." A car *is* red.
 
- If we use a class, we can create multiple objects with inherit variables (characteristics) and methods (things they can do). This sounds much more close to our conceptual understanding of cars.
+ If we use a class, we can create multiple objects with inherit variables (attributes) and methods (behaviors). This sounds much more close to our conceptual understanding of cars.
 
 ====== WITH A CLASS ======
   class Car
