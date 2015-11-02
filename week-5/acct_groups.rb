@@ -92,22 +92,23 @@ end
 ====== RELEASE 6: REFLECTION ======
 What was the most interesting and most difficult part of this challenge?
 
-
+The most difficult part was deciding when to stop!
 
 Do you feel you are improving in your ability to write pseudocode and break the problem down?
 
-
+Yes. I am still struggling to figure out my style and stick to best practices.But, I think it's coming along.
 
 Was your approach for automating this task a good solution? What could have made it even better?
 
-
+I think it is a good approach. I think there are some built-in methods that would help me refactor my code. I will continue to explore those.
 
 What data structure did you decide to store the accountability groups in and why?
 
-
+I chose a hash because I had two categories of related data: unique groups and names.
 
 What did you learn in the process of refactoring your initial solution? Did you learn any new Ruby methods?
 
+This may seem insignificant but I learned how to add a new line character using "\n". Formatting the output so it's legible was tricky but this character helped me accomplish that task. I think there are definitely some methods that would reduce the amount of code i have written. I am still exploring those methods.
 
 
 =end
