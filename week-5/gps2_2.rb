@@ -56,23 +56,63 @@ def create_list
   Hash.new
 end
 
-def add_item_qty(list_name, item, quantity)
+def add_item(list_name, item, quantity)
   list_name[item] = quantity
-  list_name
-end
-
-def remove_item_qty(item)
-  list_name.reject { |key, value| key == item }
   return list_name
 end
 
-list = create_list
-p list.is_a?(Hash)
+def remove_item(list_name, item)
+  list_name.delete_if {|key, value| key == item}
+  return list_name
+end
 
-p add_item_qty(list, "Lemonade", 2) == {"Lemonade" => 2}
+def update_item(list_name, item, qty)
+  list_name[item] = qty
+  return list_name
+end
 
+def print_list(list_name)
+  list_name.each do |item, qty|
+    puts "#{item}: #{qty}"
+  end
+end
 
-# Lemonade, qty: 2
-# Tomatoes, qty: 3
-# Onions, qty: 1
-# Ice Cream, qty: 4
+list = create_list()
+
+add_item(list, "Lemonade", 2)
+add_item(list, "Tomatoes", 3)
+add_item(list, "Onions", 1)
+add_item(list, "Ice Cream", 4)
+
+remove_item(list, "Lemonade")
+
+update_item(list, "Ice Cream", 1)
+
+print_list(list)
+
+=begin
+What did you learn about pseudocode from working on this challenge?
+
+I leanred that patience is really important when working with mulitple people on pseudocode.
+
+What are the tradeoffs of using Arrays and Hashes for this challenge?
+
+If we wanted to use arrays, we would likely have to use nested arrays to have a way of associating two pieces of data: items and quanitity. Hashes are excellent for this purpose, which is why my partner and I chose to use one.
+
+What does a method return?
+
+A method returns the value of the last evaluated expression or an explicitly defined value.
+
+What kind of things can you pass into methods as arguments?
+
+Almost any object: arrays, hashes, strings, integers.
+
+How can you pass information between methods?
+
+You can create a global variable and pass the current contents of that variable between methods. You can also create a class and then use instance variables.
+
+What concepts were solidified in this challenge, and what concepts are still confusing?
+
+This challenge was not confusing. It just required some thought about what data structure to use and how to manipulate that structure.
+
+=end
