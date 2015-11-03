@@ -31,35 +31,47 @@ class BingoBoard
   def initialize(board)
     @bingo_board = board
     @columns = %w( B I N G O )
-    @bingo_board[0][3] = "08" # so my formatting in show_board is pretty. of course, this doesn't work for a randomly generated board.
+  #  @bingo_board[0][3] = "08" # so my formatting in show_board is pretty. of course, this doesn't work for a randomly generated board.
   end
   def call_coordinate
     @column_letter = @columns.sample #choose a random column letter
     random = Random.new
     @number = random.rand(1..100) #choose a random number
-    puts "We are looking for #{@column_letter} #{@number}! \n\n"
+    puts "We are looking for \"#{@column_letter} #{@number}!\" \n\n"
+  end
+
+
 # for every row, if the value
-    # occupied by the letter's index == @number then...
-    @bingo_board.each do |row|
-      if row[@columns.index(@column_letter)].to_s == @number.to_s
-        puts "Lucky you!\n\n"
-        row[@columns.index(@column_letter)] = "X"
+# occupied by the letter's index == @number then...
+  def check_column
+      puts "#{@column_letter}  "
+      puts "== "
+      @bingo_board.each do |row|
+      if row[@columns.index(@column_letter)] == @number
+        row[@columns.index(@column_letter)] = 'X'
+        @result = true
       end
-    end
+      puts row[@columns.index(@column_letter)]
+      end
+      if @result
+        puts "\nLucky you!\n"
+      else
+        puts "\nBetter luck next time!\n\n"
+      end
   end
-  def show_column(letter)
-    puts "#{letter}  "
-    puts "== "
-    @bingo_board.each do |row|
-      puts row[@columns.index(letter)]
-    end
-  end
+#   def show_column(letter)
+#     puts "#{letter}  "
+#     puts "== "
+#     @bingo_board.each do |row|
+#       puts row[@columns.index(letter)]
+#     end
+#   end
   def show_board
     @columns.each do |letter|
       print " #{letter}  "
     end
     puts
-    print "=====================" #I considered using .times do print "==" end but I think there's no reason to have the interpreter make different objects. May as well use one long object and conserve memory.
+    print "====================" #I considered using 20.times do print "=" end but I think there's no reason to have the interpreter make different objects. May as well use one long object and conserve memory.
     puts
     @bingo_board.each do |row|
       puts
@@ -85,6 +97,11 @@ board = [[47, 44, 71, 8, 88],
         [75, 70, 54, 80, 83]]
 
 new_game = BingoBoard.new(board)
+new_game.call_coordinate
+new_game.show_column("G")
+new_game.check_board
+new_game.show_board
+
 
 =begin ====== Release 6: Reflection ======
 1. How difficult was pseudocoding this challenge? What do you think of your pseudocoding style?
