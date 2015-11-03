@@ -58,15 +58,15 @@ class GuessingGame
   def initialize(number)
       @answer = number
   end
-  def guess(guess)
-    @guess = guess
+  def guess(my_guess)
+    @guess = my_guess
     @guess = @guess > @answer ? :high : (@guess < @answer ? :low : :correct)
   end
   def solved?
-    unless @guess == :correct
-      return false
-    else
+    if @guess == :correct
       return true
+    else
+      return false
     end
   end
 end
