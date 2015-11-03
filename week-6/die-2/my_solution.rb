@@ -24,7 +24,7 @@ SHUFFLE the elements in the array and return the first element
 
 class Die
   def initialize(labels)
-    if labels.empty?
+    if labels == []
       raise ArgumentError.new("Please create a die with an array of characters.")
     else
       @labels = labels
@@ -43,10 +43,21 @@ end
 # p die.sides
 # p die.roll
 
-=begin ====== Release 4: Refactored Solution ======
+# ====== Release 4: Refactored Solution ======
 
-After reviewing my code and the Ruby Docs, I don't see how I can refactor it. I believe it is as simple as I can make it without losing readability. It is DRY as well.
+class Die
+  def initialize(labels)
+    raise ArgumentError, "Please create a die with an array of characters." if labels.length < 1
+    @labels = labels
+    @sides = @labels.length
+  end
+  attr_reader :sides
+  def roll
+    @labels.sample
+  end
+end
 
+=begin ====== Reflection ======
 
 What were the main differences between this die class and the last one you created in terms of implementation? Did you need to change much logic to get this to work?
 
@@ -60,12 +71,10 @@ It pays to put effort in to making code that is readable and easily compartmenta
 
 What new methods did you learn when working on this challenge, if any?
 
-I didn't learn about any new methods. I used methods with which I was already familiar.
+I learned about the sample method. What an easy way to grab a random element of an array!
 
 
 What concepts about classes were you able to solidify in this challenge?
 
 To be honest, I didn't solidify any concepts about classes in this excercise. I thought that this challenge was fairly simple and that it only required updating methods to handle strings instead of integers.
-
-
 =end
