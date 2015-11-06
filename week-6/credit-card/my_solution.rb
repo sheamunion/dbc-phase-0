@@ -112,8 +112,8 @@ class CreditCard
     @sum = @card_number.join.chars.map(&:to_i).reduce(:+)
   end
   def check_card
-    self.double_every_other
-    self.sum_of_digits
+    double_every_other
+    sum_of_digits
     @sum % 10 == 0 ? true : false
   end
 end
@@ -122,7 +122,7 @@ end
 
 # 1. What was the most difficult part of this challenge for you and your pair?
 
-# Although we spent several hours coding the four methods, we knew what we had to do and just plodded along making progress. We really didn't get stumped until the very final step, which turned out to be the most elusive part of this challenge. We knew #check_card had to be defined in the CreditCard class and we had coded the correct if/else statement. The problem was making #check_card call the two instance methods and then return the correct value. We sensed that we had to use "self" and spent time researching the concept and using "self" in different places--on the methods and on variables. Finally, we determined that "self.instance_method" should be called within the body of #check_card. This enables the instance of "card" to call card.instance_method within the body of #check_card.
+# Although we spent several hours coding the four methods, we knew what we had to do and just plodded along making progress. We really didn't get stumped until the very final step, which turned out to be the most elusive part of this challenge. We knew #check_card had to be defined in the CreditCard class and we had coded the correct if/else statement. The problem was making #check_card call the two instance methods and then return the correct value.
 
 # 2. What new methods did you find to help you when you refactored?
 
@@ -132,5 +132,4 @@ end
 
 # - You cannot use #to_i or #to_s directly on collections. They must be used on strings or numbers.
 # - You can "add" arrays together using the + operator.
-# - "self" was clarified. See my answer to number 1, above.
 # - I learned about the ampersand operator. Specifically, array.map(&:to_i) is the same as writing array.map { |value| value.to_i }
