@@ -49,8 +49,9 @@
 
 // Create prepareLesson function
 // set teacher's "prepared" to true
-// Initial Code
 
+//================================= Initial Code
+/*
 function Teacher(name) {
   this.name = name;
   this.booksRead = [];
@@ -100,9 +101,9 @@ console.log(shea.lessonsReady);
 prepareLesson("chemistry");
 console.log(shea.lessonsReady);
 
+*/
 
-
-// Refactored Code
+//================================= Refactored Code
 
 function Teacher(name) {
   this.name = name;
