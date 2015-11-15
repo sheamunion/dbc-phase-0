@@ -80,3 +80,9 @@ function mean(numbers) {
 }
 
 // Median function is perfect. No refactoring required.
+
+User stories
+
+As a user, I want the program to tell me the sum of a list of numbers.
+As a user, I want the program to tell me the mean of a list of numbers.
+As a user, I want the program to tell me the median of a list of numbers, accounting for lists of even and odd lengths.
