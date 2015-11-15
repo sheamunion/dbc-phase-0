@@ -149,19 +149,70 @@ function Book(title, topic) {
 
 // ============ DRIVER CODE ============
 
+// var player = new Teacher(prompt("Please enter a name for your character")); // Create a new teacher with user-provided name
 
-var shea = new Teacher("Shea"); //create a new teacher
-var beginnerFinances = new Book("Beginner Finances", "financial responsibility");
+// var player = new Teacher("Shea"); // Create a new teacher
+var beginnerFinances = new Book("Beginner Finances", "financial responsibility"); // create some books
 var modernChemistry = new Book("Modern Chemistry", "chemistry");
 var foundationOfVirtues = new Book("The Foundation of Virtues", "virtues");
-// shea.collect(foundationOfVirtues);
-// shea.readBook(foundationOfVirtues);
-// shea.readBook(modernChemistry);
-shea.readBook(beginnerFinances);
+// player.collect(foundationOfVirtues); // put a book in backpack
+// player.readBook(foundationOfVirtues); // read a book
+// player.readBook(modernChemistry);
+// player.readBook(beginnerFinances);
 
-// shea.prepareLesson("financial responsibility");
-shea.prepareLesson("virtues");
-// shea.prepareLesson("chemistry");
+// player.prepareLesson("financial responsibility"); // prepare a lesson
+// player.prepareLesson("virtues");
+// player.prepareLesson("chemistry");
+
+
+
+// ======================== testing readline
+
+var readline = require('readline');
+
+var rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+console.log("Welcome to \"They Are the Future\,\" an interactive, text-based game where you play as an intrepid individual striving to build a better world. Amidst the violence and disunity afflicting society, you choose to see hope in humanity. But, it is a hope that requires effort. You are convinced that if humanity is to advance towards a peaceful, just, and proserpous world order, the education of children of every generation must be given the highest priority. For, they are the future.\n\n");
+
+rl.question("Please enter a name for your character: \n", function(name) {
+  var answer = new Teacher(name);
+  return answer
+  rl.close();
+});
+
+// console.log("\n\n Welcome, " + player.name + "! Your mission is to teach a group of youngsters in your neighborhood a lesson that will help them navigate the next few years of their lives. Before you can teach a lesson you must acquire knowledge by reading books. There are several books to read: \n");
+
+// console.log(beginnerFinances.title);
+// console.log(modernChemistry.title);
+// console.log(foundationOfVirtues.title);
+
+
+
+
+
+// ======================== testing readline
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Reflection
