@@ -1,7 +1,7 @@
 // DOM Manipulation Challenge
 
 
-// I worked on this challenge [by myself, with: ].
+// I worked on this challenge [with: William Brinkert].
 
 
 // Add your JavaScript calls to this page:
@@ -38,3 +38,18 @@ for (var i = 0; i < collection.length; i++) {
 var template = document.getElementById("hidden");
 document.body.appendChild(template.content.cloneNode(true));
 
+// =================== Reflection ===================
+// 1. What did you learn about the DOM?
+//
+//    We learned that the DOM is very logical. It has a clear hierarchy.
+//    The elements in the DOM can be accessed and manipulated using the
+//    methods identified below.
+//
+// 2. What are some useful methods to use to manipulate the DOM?
+//
+//    We can access the elements of the DOM using IDs, classes, and
+//    tag names--e.g. getElementById(), getElementsByClassName(), and
+//    getElementsByTagName(). They can also be accessed based on their
+//    relationship to other tags (e.g., parents and children).
+//    Furthermore, we can alter the style of elements using .style and
+//    change the actual conent of tags using .innerHTML.
