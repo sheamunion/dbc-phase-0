@@ -1,3 +1,11 @@
+# OO Basics: Student
+
+
+# I worked on this challenge [with: Tal Schwartz].
+# This challenge took us 1.5 hours.
+
+# ============== Initial Solution: ==============
+
 class Student
   attr_accessor :first_name, :scores, :average, :letter_grade
 
@@ -10,9 +18,7 @@ class Student
 
   def get_average
     sum = 0
-    @scores.each do |score|
-      sum += score
-    end
+    @scores.each { |score| sum += score }
     @average = sum/scores.length
   end
 
@@ -30,55 +36,31 @@ class Student
       @letter_grade = "F"
     end
   end
-
-
 end
 
 def linear_search(list, name)
-    list.each_with_index{ |student, i| if student.first_name == name
+  list.each_with_index do |student, i|
+    if student.first_name == name
       return i
-      else
+    else
       return -1
-      end
-      }
+    end
+  end
 end
 
 def binary_search(list, name, imin, imax)
   unsorted_list = []
   list.each{|x| unsorted_list << x.first_name}
-  #  sorted_list = list.sort
   sorted_list = unsorted_list.sort
-  #p sorted_list
-
-#   p unsorted_list.index("Jane")
-#   p name
-#   p unsorted_list.index(name)
-
-
   mid_position = imin + ((imax-imin)/2)
-
-  #p sorted_list
-  #p mid_position
-
-
   if name == sorted_list[mid_position]
-    #p "hit"
     p unsorted_list.index(name)
   elsif name > sorted_list[mid_position]
     binary_search(list, name, mid_position+1, imax)
-    #p "top half"
   else name < sorted_list[mid_position]
     binary_search(list, name, imin, mid_position-1)
-    #p "bottom half"
   end
-
- # p sorted_list
-  #p mid_position
-#  list[list.length/2]
-  #  list.each {}
 end
-
-
 
 alex = Student.new("Alex", [100,100,100,0,100])
 jon = Student.new("Jon", [80,100,100,0,67])
@@ -88,39 +70,49 @@ mark = Student.new("Mark", [75,100,89,0,100])
 
 students = [alex, jon, james, jane, mark]
 
-#p alex.average
-#p alex.letter_grade
+# ============== Initial Tests: ==============
 
+p students[0].first_name == "Alex"
+p students[0].scores.length == 5
+p students[0].scores[0] == students[0].scores[4]
+p students[0].scores[3] == 0
 
-#puts students[0].first_name
+# ============== Additional Tests 1: ==============
+
+p students[0].average == 80
+p students[0].letter_grade == 'B'
+
+# ============== Additional Tests 2: ==============
+
+p linear_search(students, "Alex") == 0
+p linear_search(students, "NOT A STUDENT") == -1
 binary_search(students, "Alex", 0, students.length)
 binary_search(students, "Jane", 0, students.length)
 binary_search(students, "James", 0, students.length)
 binary_search(students, "Mark", 0, students.length)
 binary_search(students, "Jon", 0, students.length)
 
+=begin ============== Reflection ==============
 
-# DRIVER TESTS GO BELOW THIS LINE
-# Initial Tests:
+1. What concepts did you review in this challenge?
 
-# p students[0].first_name == "Alex"
-# p students[0].scores.length == 5
-# p students[0].scores[0] == students[0].scores[4]
-# p students[0].scores[3] == 0
+  - how to use attribute methods to read/write instance variables
+  in a class
+  - how to write a class
+  - how to instantiate a class
+  - how to initialize properties of class instances
+  - how to write a case statement
+  - how to perform a binary search
+  - how to use recursion
 
+2. What is still confusing to you about Ruby?
 
-# # Additional Tests 1:
+  I feel that I have a weak understanding of recursion. This challenge
+  helped me advance that understanding, but, I still have so much to
+  learn and solidify!
 
-# p students[0].average == 80
-# p students[0].letter_grade == 'B'
+3. What are you going to study to get more prepared for Phase 1?
 
-# # Additional Tests 2:
+  I plan to complete every challenge in the Ruby module.
 
-# p linear_search(students, "Alex") == 0
-# p linear_search(students, "NOT A STUDENT") == -1
-
-
-
-
-
-# Reflection
+=end
